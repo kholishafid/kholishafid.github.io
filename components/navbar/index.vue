@@ -26,7 +26,7 @@ onMounted(() => {
         <NuxtLink to="/"><strong class="text-2xl font-medium">kholishafid</strong></NuxtLink>
       </li>
     </ul>
-    <ul class="flex gap-6 flex-row items-center text-xl">
+    <ul class="flex sm:gap-6 gap-4 flex-row items-center text-lg sm:text-xl">
       <li>
         <NuxtLink to="/portfolio">Portfolio</NuxtLink>
       </li>

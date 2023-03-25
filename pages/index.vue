@@ -17,7 +17,7 @@ useHead({
             class="dark:text-[#f0db4f] bg-[#f0db4f] dark:bg-transparent text-black">JavaScript</code>.
         </h3>
       </hgroup>
-      <div class="p-4 box-border max-w-[500px]">
+      <div class="p-4 box-border max-w-[400px] lg:max-w-[500px]">
         <img src="~/assets/image/me-portait.svg" alt="portait">
       </div>
     </div>
@@ -38,16 +38,16 @@ useHead({
     </div>
     <div class="my-6 sm:my-20 p-4">
       <h1 class="text-2xl sm:text-4xl mb-4 font-cardo font-bold">Skills</h1>
-      <div class="grid sm:grid-cols-2 xl:grid-cols-3 gap-8">
+      <div class="grid lg:grid-cols-2 xl:grid-cols-3 gap-8">
         <div>
           <h5 class="text-slate-800 dark:text-gray-200 text-2xl mb-4">Markup & Languange</h5>
-          <ul class="grid grid-cols-2 gap-2 bg-black/5 dark:bg-white/5 p-4">
+          <ul class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-2 gap-2 bg-black/5 dark:bg-white/5 p-4">
             <li
               class="sm:text-xl text-slate-700 dark:text-gray-300 flex flex-col gap-2 sm:gap-4 items-center w-full aspect-square hover:bg-black/10 dark:hover:bg-white/10 rounded justify-center p-2 sm:p-4 text-center">
               <img src="~/assets/image/html-css.svg" alt="html-css" class="w-12 sm:w-16 rounded">
               <div>
-                <p class="sm:text-xl dark:text-gray-300 text-slate-700">HTML & CSS</p>
-                <p class="text-slate-700 dark:text-gray-200">
+                <p class="sm:text-lg lg:text-xl dark:text-gray-300 text-slate-700">HTML & CSS</p>
+                <p class="sm:text-lg lg:text-xl text-slate-700 dark:text-gray-200">
                   Advance
                 </p>
               </div>
@@ -56,82 +56,83 @@ useHead({
               class="sm:text-xl text-gray-300 flex flex-col gap-2 sm:gap-4 items-center w-full aspect-square hover:bg-black/10 dark:hover:bg-white/10 rounded justify-center p-2 sm:p-4 text-center">
               <img src="~/assets/image/js-logo.svg" alt="javascript" class="w-12 sm:w-16 rounded">
               <div class="w-full">
-                <p class="sm:text-xl dark:text-gray-300 text-slate-700">JavaScript</p>
-                <p class="text-slate-700 dark:text-gray-200">Intermediate</p>
+                <p class="sm:text-lg lg:text-xl dark:text-gray-300 text-slate-700">JavaScript</p>
+                <p class="sm:text-lg lg:text-xl text-slate-700 dark:text-gray-200">Intermediate</p>
               </div>
             </li>
             <li
               class="sm:text-xl text-gray-300 flex flex-col gap-2 sm:gap-4 items-center w-full aspect-square hover:bg-black/10 dark:hover:bg-white/10 rounded justify-center p-2 sm:p-4 text-center">
               <img src="~/assets/image/php-logo.svg" alt="javascript" class="w-12 sm:w-16 rounded">
               <div class="w-full">
-                <p class="sm:text-xl dark:text-gray-300 text-slate-700">PHP</p>
-                <p class="text-slate-700 dark:text-gray-200">Intermediate</p>
+                <p class="sm:text-lg lg:text-xl dark:text-gray-300 text-slate-700">PHP</p>
+                <p class="sm:text-lg lg:text-xl text-slate-700 dark:text-gray-200">Intermediate</p>
               </div>
             </li>
           </ul>
         </div>
         <div>
           <h5 class="text-slate-800 dark:text-gray-200 text-2xl mb-4">Technologies</h5>
-          <ul class="grid grid-cols-2 gap-2 bg-black/5 dark:bg-white/5 p-4">
+          <ul class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-2 gap-2 bg-black/5 dark:bg-white/5 p-4">
             <li
               class="sm:text-xl text-gray-300 flex flex-col gap-2 sm:gap-4 items-center w-full aspect-square hover:bg-black/10 dark:hover:bg-white/10 rounded justify-center p-2 sm:p-4 text-center">
               <img src="~/assets/image/vue-nuxt.svg" alt="vue-nuxt" class="w-12 sm:w-16 rounded">
               <div class="w-full">
-                <p class="sm:text-xl dark:text-gray-300 text-slate-700">Vue & Nuxt</p>
-                <p class="text-slate-700 dark:text-gray-200">Intermediate</p>
+                <p class="sm:text-lg lg:text-xl dark:text-gray-300 text-slate-700">Vue & Nuxt</p>
+                <p class="sm:text-lg lg:text-xl text-slate-700 dark:text-gray-200">Intermediate</p>
               </div>
             </li>
             <li
               class="sm:text-xl text-gray-300 flex flex-col gap-2 sm:gap-4 items-center w-full aspect-square hover:bg-black/10 dark:hover:bg-white/10 rounded justify-center p-2 sm:p-4 text-center">
               <img src="~/assets/image/laravel-logo.svg" alt="laravel" class="w-12 sm:w-16 rounded">
               <div class="w-full">
-                <p class="sm:text-xl dark:text-gray-300 text-slate-700">Laravel</p>
-                <p class="text-slate-700 dark:text-gray-200">Begginer</p>
+                <p class="sm:text-lg lg:text-xl dark:text-gray-300 text-slate-700">Laravel</p>
+                <p class="sm:text-lg lg:text-xl text-slate-700 dark:text-gray-200">Begginer</p>
               </div>
             </li>
             <li
               class="sm:text-xl text-gray-300 flex flex-col gap-2 sm:gap-4 items-center w-full aspect-square hover:bg-black/10 dark:hover:bg-white/10 rounded justify-center p-2 sm:p-4 text-center">
               <img src="~/assets/image/tailwind-logo.svg" alt="tailwind" class="w-12 sm:w-16 rounded">
               <div class="w-full">
-                <p class="sm:text-xl dark:text-gray-300 text-slate-700">Tailwind</p>
-                <p class="text-slate-700 dark:text-gray-200">Intermediate</p>
+                <p class="sm:text-lg lg:text-xl dark:text-gray-300 text-slate-700">Tailwind</p>
+                <p class="sm:text-lg lg:text-xl text-slate-700 dark:text-gray-200">Intermediate</p>
               </div>
             </li>
             <li
               class="sm:text-xl text-gray-300 flex flex-col gap-2 sm:gap-4 items-center w-full aspect-square hover:bg-black/10 dark:hover:bg-white/10 rounded justify-center p-2 sm:p-4 text-center">
               <img src="~/assets/image/next-logo.svg" alt="next" class="w-12 sm:w-16 rounded">
               <div class="w-full">
-                <p class="sm:text-xl dark:text-gray-300 text-slate-700">Next</p>
-                <p class="text-slate-700 dark:text-gray-200">Begginer</p>
+                <p class="sm:text-lg lg:text-xl dark:text-gray-300 text-slate-700">Next</p>
+                <p class="sm:text-lg lg:text-xl text-slate-700 dark:text-gray-200">Begginer</p>
               </div>
             </li>
           </ul>
         </div>
         <div class="h-full flex flex-col">
           <h5 class="text-slate-800 dark:text-gray-200 text-2xl mb-4">Database & BaaS</h5>
-          <ul class="grid grid-cols-2 gap-2 bg-black/5 dark:bg-white/5 p-4 flex-1">
+          <ul
+            class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-2 gap-2 bg-black/5 dark:bg-white/5 p-4 flex-1">
             <li
               class="sm:text-xl text-gray-300 flex flex-col gap-2 sm:gap-4 items-center w-full aspect-square hover:bg-black/10 dark:hover:bg-white/10 rounded justify-center p-2 sm:p-4 text-center">
               <img src="~/assets/image/mysql-logo.svg" alt="mysql" class="w-12 sm:w-16 rounded">
               <div class="w-full">
-                <p class="sm:text-xl dark:text-gray-300 text-slate-700">Mysql</p>
-                <p class="text-slate-700 dark:text-gray-200">Intermediate</p>
+                <p class="sm:text-lg lg:text-xl dark:text-gray-300 text-slate-700">Mysql</p>
+                <p class="sm:text-lg lg:text-xl text-slate-700 dark:text-gray-200">Intermediate</p>
               </div>
             </li>
             <li
               class="sm:text-xl text-gray-300 flex flex-col gap-2 sm:gap-4 items-center w-full aspect-square hover:bg-black/10 dark:hover:bg-white/10 rounded justify-center p-2 sm:p-4 text-center">
               <img src="~/assets/image/postgreesql.svg" alt="postgree" class="w-12 sm:w-16 rounded">
               <div class="w-full">
-                <p class="sm:text-xl dark:text-gray-300 text-slate-700">PostgreeSQL</p>
-                <p class="text-slate-700 dark:text-gray-200">Begginer</p>
+                <p class="sm:text-lg lg:text-xl dark:text-gray-300 text-slate-700">PostgreeSQL</p>
+                <p class="sm:text-lg lg:text-xl text-slate-700 dark:text-gray-200">Begginer</p>
               </div>
             </li>
             <li
               class="sm:text-xl text-gray-300 flex flex-col gap-2 sm:gap-4 items-center w-full aspect-square hover:bg-black/10 dark:hover:bg-white/10 rounded justify-center p-2 sm:p-4 text-center">
               <img src="~/assets/image/supabase.svg" alt="supabase" class="w-12 sm:w-16 rounded">
               <div class="w-full">
-                <p class="sm:text-xl dark:text-gray-300 text-slate-700">Supabase</p>
-                <p class="text-slate-700 dark:text-gray-200">Begginer</p>
+                <p class="sm:text-lg lg:text-xl dark:text-gray-300 text-slate-700">Supabase</p>
+                <p class="sm:text-lg lg:text-xl text-slate-700 dark:text-gray-200">Begginer</p>
               </div>
             </li>
           </ul>

@@ -1,5 +1,5 @@
 <template>
-  <div class="max-w-4xl mx-auto h-full mt-6 mb-16">
+  <div class="px-4 max-w-4xl mx-auto h-full mt-6 sm:mb-16 mb-8">
     <ContentDoc>
       <template v-slot="{ doc }">
         <div v-if="doc.thumbnail" class="mb-8">

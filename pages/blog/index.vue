@@ -8,7 +8,7 @@ useHead({
 </script>
 
 <template>
-  <main class="max-w-4xl mx-auto">
+  <main class="px-4 max-w-4xl mx-auto">
     <ContentList path="/blog">
       <template v-slot="{ list }">
         <div class="flex flex-col gap-4 rounded-lg my-6">
@@ -19,9 +19,9 @@ useHead({
                   class="w-full mb-4 sm:mb-0 sm:h-36 aspect-video object-cover rounded">
               </div>
               <div class="flex flex-col justify-center">
-                <h2 class="text-3xl font-cardo font-bold mb-2">{{ article.title }}</h2>
-                <p class="dark:text-gray-200 text-slate-700 font-hind mb-1">{{ article.date }}</p>
-                <p class="dark:text-gray-300 text-slate-700 text-xl font-hind">{{ article.description }}</p>
+                <h2 class="text-2xl sm:text-3xl font-cardo font-bold mb-2">{{ article.title }}</h2>
+                <p class="dark:text-gray-200 text-slate-700 text-sm sm:text-base font-hind mb-1">{{ article.date }}</p>
+                <p class="dark:text-gray-300 text-slate-700 sm:text-xl font-hind">{{ article.description }}</p>
               </div>
             </NuxtLink>
           </div>

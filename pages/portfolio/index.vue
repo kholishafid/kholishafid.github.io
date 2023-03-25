@@ -8,7 +8,7 @@ useHead({
 </script>
 
 <template>
-  <main class="px-4 mb-20 mt-6">
+  <main class="px-4 sm:mb-20 mb-10 mt-6">
     <ContentList path="/portfolio">
       <template v-slot="{ list }">
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 rounded-lg">
@@ -20,7 +20,7 @@ useHead({
               </a>
             </div>
             <h2 class="text-2xl font-bold mb-2">{{ article.title }}</h2>
-            <p class="dark:text-gray-300 text-slate-700 text-xl">{{ article.description }}</p>
+            <p class="dark:text-gray-300 text-slate-700 sm:text-xl">{{ article.description }}</p>
           </div>
         </div>
       </template>
