@@ -1,0 +1,52 @@
+html[class="dark"] {
+  background-color: #22222c;
+  color: #fff;
+}
+html[class="light"] {
+  background-color: #e9e4ce;
+  color: #22222c;
+}
+body {
+  font-family: "Hind", sans-serif;
+  overflow-y: scroll;
+}
+
+html[class="light"] ::-moz-selection {
+  color: white;
+  background: #22222c;
+}
+
+html[class="light"] ::selection {
+  color: white;
+  background: #22222c;
+}
+
+html[class="dark"] ::-moz-selection {
+  color: #22222c;
+  background: #e9e4ce;
+}
+
+html[class="dark"] ::selection {
+  color: #22222c;
+  background: #e9e4ce;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #d1d1c3;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #ef233c;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #d90429;
+}
