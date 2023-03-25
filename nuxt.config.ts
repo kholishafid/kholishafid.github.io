@@ -18,6 +18,10 @@ export default defineNuxtConfig({
           crossorigin: "anonymous",
         },
         {
+          rel: "icon",
+          href: "/portait.png",
+        },
+        {
           rel: "stylesheet",
           href: "https://fonts.googleapis.com/css2?family=Cardo:wght@400;700&family=Hind:wght@300;400;500;600;700&display=swap",
         },
