@@ -11,7 +11,7 @@ useHead({
   <main class="px-4 max-w-4xl mx-auto">
     <ContentList path="/blog">
       <template v-slot="{ list }">
-        <div class="flex flex-col gap-4 rounded-lg my-6">
+        <div class="flex flex-col gap-4 rounded-lg my-6 ">
           <div v-for="article in list" :key="article._path" class="bg-black/5 dark:bg-white/5 p-4 rounded">
             <NuxtLink :to="article._path" class="sm:flex gap-8">
               <div v-if="article.thumbnail">
@@ -19,9 +19,9 @@ useHead({
                   class="w-full mb-4 sm:mb-0 sm:h-36 aspect-video object-cover rounded">
               </div>
               <div class="flex flex-col justify-center">
-                <h2 class="text-2xl sm:text-3xl font-cardo font-bold mb-2">{{ article.title }}</h2>
-                <p class="dark:text-gray-200 text-slate-700 text-sm sm:text-base font-hind mb-1">{{ article.date }}</p>
-                <p class="dark:text-gray-300 text-slate-700 sm:text-xl font-hind">{{ article.description }}</p>
+                <h2 class="text-xl md:text-2xl font-hind font-bold mb-2">{{ article.title }}</h2>
+                <p class="dark:text-gray-200 text-slate-700 font-hind mb-1">{{ article.date }}</p>
+                <p class="dark:text-gray-300 text-slate-700 text-lg md:text-xl font-hind">{{ article.description }}</p>
               </div>
             </NuxtLink>
           </div>
