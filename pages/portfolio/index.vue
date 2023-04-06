@@ -19,8 +19,8 @@ useHead({
                   class="w-full aspect-[16/9] object-cover rounded">
               </a>
             </div>
-            <h2 class="text-2xl font-bold mb-2">{{ article.title }}</h2>
-            <p class="dark:text-gray-300 text-slate-700 sm:text-xl">{{ article.description }}</p>
+            <h2 class="text-xl md:text-2xl font-bold mb-2">{{ article.title }}</h2>
+            <p class="dark:text-gray-300 text-slate-700 text-lg sm:text-xl">{{ article.description }}</p>
           </div>
         </div>
       </template>
