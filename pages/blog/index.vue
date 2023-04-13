@@ -5,18 +5,19 @@ useHead({
     { name: 'description', content: 'kholishafid blog.' }
   ],
 });
+const query = await queryContent('blog').where('').sort({ contentIndex: -1 }).find()
 </script>
 
 <template>
-  <main class="px-4 max-w-4xl mx-auto">
-    <ContentList path="/blog">
+  <main class="px-4 max-w-6xl mx-auto">
+    <ContentList :query="query" path="/blog">
       <template v-slot="{ list }">
-        <div class="flex flex-col gap-4 rounded-lg my-6 ">
-          <div v-for="article in list" :key="article._path" class="bg-black/5 dark:bg-white/5 p-4 rounded">
-            <NuxtLink :to="article._path" class="sm:flex gap-8">
-              <div v-if="article.thumbnail">
-                <img :src="article.thumbnail" alt="thumbnail"
-                  class="w-full mb-4 sm:mb-0 sm:h-36 aspect-video object-cover rounded">
+        <div class="grid lg:grid-cols-2 gap-8 rounded-lg my-6">
+          <div v-for="article in list" :key="article._path"
+            class="bg-black/5 dark:bg-white/5 p-4 rounded hover:scale-105 transition-all">
+            <NuxtLink :to="article._path" class="gap-8">
+              <div v-if="article.thumbnail" class="mb-4">
+                <img :src="article.thumbnail" alt="thumbnail" class="w-full aspect-video rounded" draggable="false">
               </div>
               <div class="flex flex-col justify-center">
                 <h2 class="text-xl md:text-2xl font-hind font-bold mb-2">{{ article.title }}</h2>

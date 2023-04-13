@@ -2,7 +2,8 @@
 title: "My first blog."
 description: "Jadi ini adalah blog pertamaku."
 thumbnail: "https://source.unsplash.com/78A265wPiO4"
-date: "25 Mar 11:55"
+date: "25 Mar 2023"
+contentIndex: 1
 ---
 
 ## Intro
