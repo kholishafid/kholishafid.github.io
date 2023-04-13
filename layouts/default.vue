@@ -1,3 +1,11 @@
+<script setup>
+useHead({
+  meta: [
+    { name: "googlebot", content: "notranslate" }
+  ]
+})
+</script>
+
 <template>
   <div class="min-h-screen flex flex-col">
     <Navbar />

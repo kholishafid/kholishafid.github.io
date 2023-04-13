@@ -2,7 +2,7 @@
 useHead({
   title: 'kholishafid',
   meta: [
-    { name: 'description', content: 'kholis hafid website.' }
+    { name: 'description', content: 'Hafid Nur Kholis personal website.' }
   ],
 });
 </script>
@@ -41,101 +41,48 @@ useHead({
       <div class="grid lg:grid-cols-2 xl:grid-cols-3 gap-8">
         <div>
           <h5 class="text-slate-800 dark:text-gray-200 text-xl md:text-2xl mb-4">Markup & Languange</h5>
-          <ul class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-2 gap-2 bg-black/5 dark:bg-white/5 p-4">
-            <li
-              class="md:text-xl text-slate-700 dark:text-gray-300 flex flex-col gap-2 md:gap-4 items-center w-full aspect-square hover:bg-black/10 dark:hover:bg-white/10 rounded justify-center p-2 md:p-4 text-center">
+          <SkillList>
+            <SkillItem label="HTML & CSS" level="Advance">
               <img src="~/assets/image/html-css.svg" alt="html-css" class="w-12 md:w-16 rounded">
-              <div>
-                <p class="md:text-lg lg:text-xl dark:text-gray-300 text-slate-700">HTML & CSS</p>
-                <p class="md:text-lg lg:text-xl text-slate-700 dark:text-gray-200">
-                  Advance
-                </p>
-              </div>
-            </li>
-            <li
-              class="sm:text-xl text-gray-300 flex flex-col gap-2 sm:gap-4 items-center w-full aspect-square hover:bg-black/10 dark:hover:bg-white/10 rounded justify-center p-2 sm:p-4 text-center">
+            </SkillItem>
+            <SkillItem label="JavaScript" level="Intermediate">
               <img src="~/assets/image/js-logo.svg" alt="javascript" class="w-12 sm:w-16 rounded">
-              <div class="w-full">
-                <p class="sm:text-lg lg:text-xl dark:text-gray-300 text-slate-700">JavaScript</p>
-                <p class="sm:text-lg lg:text-xl text-slate-700 dark:text-gray-200">Intermediate</p>
-              </div>
-            </li>
-            <li
-              class="sm:text-xl text-gray-300 flex flex-col gap-2 sm:gap-4 items-center w-full aspect-square hover:bg-black/10 dark:hover:bg-white/10 rounded justify-center p-2 sm:p-4 text-center">
-              <img src="~/assets/image/php-logo.svg" alt="javascript" class="w-12 sm:w-16 rounded">
-              <div class="w-full">
-                <p class="sm:text-lg lg:text-xl dark:text-gray-300 text-slate-700">PHP</p>
-                <p class="sm:text-lg lg:text-xl text-slate-700 dark:text-gray-200">Intermediate</p>
-              </div>
-            </li>
-          </ul>
+            </SkillItem>
+            <SkillItem label="PHP" level="Intermediate">
+              <img src="~/assets/image/php-logo.svg" alt="php" class="w-12 sm:w-16 rounded">
+            </SkillItem>
+          </SkillList>
         </div>
         <div>
           <h5 class="text-slate-800 dark:text-gray-200 text-xl md:text-2xl mb-4">Technologies</h5>
-          <ul class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-2 gap-2 bg-black/5 dark:bg-white/5 p-4">
-            <li
-              class="sm:text-xl text-gray-300 flex flex-col gap-2 sm:gap-4 items-center w-full aspect-square hover:bg-black/10 dark:hover:bg-white/10 rounded justify-center p-2 sm:p-4 text-center">
+          <SkillList>
+            <SkillItem label="Vue & Nuxt" level="Intermediate">
               <img src="~/assets/image/vue-nuxt.svg" alt="vue-nuxt" class="w-12 sm:w-16 rounded">
-              <div class="w-full">
-                <p class="sm:text-lg lg:text-xl dark:text-gray-300 text-slate-700">Vue & Nuxt</p>
-                <p class="sm:text-lg lg:text-xl text-slate-700 dark:text-gray-200">Intermediate</p>
-              </div>
-            </li>
-            <li
-              class="sm:text-xl text-gray-300 flex flex-col gap-2 sm:gap-4 items-center w-full aspect-square hover:bg-black/10 dark:hover:bg-white/10 rounded justify-center p-2 sm:p-4 text-center">
+            </SkillItem>
+            <SkillItem label="Laravel" level="Beginner">
               <img src="~/assets/image/laravel-logo.svg" alt="laravel" class="w-12 sm:w-16 rounded">
-              <div class="w-full">
-                <p class="sm:text-lg lg:text-xl dark:text-gray-300 text-slate-700">Laravel</p>
-                <p class="sm:text-lg lg:text-xl text-slate-700 dark:text-gray-200">Begginer</p>
-              </div>
-            </li>
-            <li
-              class="sm:text-xl text-gray-300 flex flex-col gap-2 sm:gap-4 items-center w-full aspect-square hover:bg-black/10 dark:hover:bg-white/10 rounded justify-center p-2 sm:p-4 text-center">
+            </SkillItem>
+            <SkillItem label="Tailwind" level="Intermediate">
               <img src="~/assets/image/tailwind-logo.svg" alt="tailwind" class="w-12 sm:w-16 rounded">
-              <div class="w-full">
-                <p class="sm:text-lg lg:text-xl dark:text-gray-300 text-slate-700">Tailwind</p>
-                <p class="sm:text-lg lg:text-xl text-slate-700 dark:text-gray-200">Intermediate</p>
-              </div>
-            </li>
-            <li
-              class="sm:text-xl text-gray-300 flex flex-col gap-2 sm:gap-4 items-center w-full aspect-square hover:bg-black/10 dark:hover:bg-white/10 rounded justify-center p-2 sm:p-4 text-center">
+            </SkillItem>
+            <SkillItem label="Laravel" level="Beginner">
               <img src="~/assets/image/next-logo.svg" alt="next" class="w-12 sm:w-16 rounded">
-              <div class="w-full">
-                <p class="sm:text-lg lg:text-xl dark:text-gray-300 text-slate-700">Next</p>
-                <p class="sm:text-lg lg:text-xl text-slate-700 dark:text-gray-200">Begginer</p>
-              </div>
-            </li>
-          </ul>
+            </SkillItem>
+          </SkillList>
         </div>
         <div class="h-full flex flex-col">
           <h5 class="text-slate-800 dark:text-gray-200 text-xl md:text-2xl mb-4">Database & BaaS</h5>
-          <ul
-            class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-2 gap-2 bg-black/5 dark:bg-white/5 p-4 flex-1">
-            <li
-              class="sm:text-xl text-gray-300 flex flex-col gap-2 sm:gap-4 items-center w-full aspect-square hover:bg-black/10 dark:hover:bg-white/10 rounded justify-center p-2 sm:p-4 text-center">
+          <SkillList>
+            <SkillItem label="MySQL" level="Intermediate">
               <img src="~/assets/image/mysql-logo.svg" alt="mysql" class="w-12 sm:w-16 rounded">
-              <div class="w-full">
-                <p class="sm:text-lg lg:text-xl dark:text-gray-300 text-slate-700">Mysql</p>
-                <p class="sm:text-lg lg:text-xl text-slate-700 dark:text-gray-200">Intermediate</p>
-              </div>
-            </li>
-            <li
-              class="sm:text-xl text-gray-300 flex flex-col gap-2 sm:gap-4 items-center w-full aspect-square hover:bg-black/10 dark:hover:bg-white/10 rounded justify-center p-2 sm:p-4 text-center">
+            </SkillItem>
+            <SkillItem label="PostgreSQL" level="Beginner">
               <img src="~/assets/image/postgreesql.svg" alt="postgree" class="w-12 sm:w-16 rounded">
-              <div class="w-full">
-                <p class="sm:text-lg lg:text-xl dark:text-gray-300 text-slate-700">PostgreeSQL</p>
-                <p class="sm:text-lg lg:text-xl text-slate-700 dark:text-gray-200">Begginer</p>
-              </div>
-            </li>
-            <li
-              class="sm:text-xl text-gray-300 flex flex-col gap-2 sm:gap-4 items-center w-full aspect-square hover:bg-black/10 dark:hover:bg-white/10 rounded justify-center p-2 sm:p-4 text-center">
+            </SkillItem>
+            <SkillItem label="Supabase" level="Beginner">
               <img src="~/assets/image/supabase.svg" alt="supabase" class="w-12 sm:w-16 rounded">
-              <div class="w-full">
-                <p class="sm:text-lg lg:text-xl dark:text-gray-300 text-slate-700">Supabase</p>
-                <p class="sm:text-lg lg:text-xl text-slate-700 dark:text-gray-200">Begginer</p>
-              </div>
-            </li>
-          </ul>
+            </SkillItem>
+          </SkillList>
         </div>
       </div>
     </div>
@@ -146,25 +93,25 @@ useHead({
       <div class="flex flex-col sm:flex-row gap-4">
         <a href="https://github.com/kholishafid" target="_blank">
           <div
-            class="flex items-center gap-4 hover:bg-[#d1d1c3]/60 dark:hover:bg-white/10 rounded-full pr-6 cursor-pointer">
+            class="flex items-center gap-4 hover:bg-[#d1d1c3]/60 dark:hover:bg-white/10 rounded-full p-2 pr-6 cursor-pointer">
             <div class="dark:bg-slate-200 w-fit rounded-full p-2">
               <img src="~~/assets/icon/github.svg" class="w-6 h-6" alt="github">
             </div>
             <p class="text-lg md:text-xl text-slate-700 dark:text-gray-300">kholishafid</p>
           </div>
         </a>
-        <a href="https://www.instagram.com/ka_canhisme" target="_blank">
+        <a href="https://www.linkedin.com/in/hafid-nur-kholis-833195248/" target="_blank">
           <div
-            class="flex items-center gap-4 hover:bg-[#d1d1c3]/60 dark:hover:bg-white/10 rounded-full pr-6 cursor-pointer">
+            class="flex items-center gap-4 hover:bg-[#d1d1c3]/60 dark:hover:bg-white/10 rounded-full p-2 pr-6 cursor-pointer">
             <div class="dark:bg-slate-200 w-fit rounded-full p-2">
-              <img src="~~/assets/icon/instagram.svg" class="w-6 h-6" alt="github">
+              <img src="~~/assets/icon/linkedin.svg" class="w-6 h-6" alt="github">
             </div>
-            <p class="text-lg md:text-xl text-slate-700 dark:text-gray-300">@ka_canhisme</p>
+            <p class="text-lg md:text-xl text-slate-700 dark:text-gray-300">Hafid Nur Kholis</p>
           </div>
         </a>
         <a href="https://twitter.com/kholis_hafid" target="_blank">
           <div
-            class="flex items-center gap-4 hover:bg-[#d1d1c3]/60 dark:hover:bg-white/10 rounded-full pr-6 cursor-pointer">
+            class="flex items-center gap-4 hover:bg-[#d1d1c3]/60 dark:hover:bg-white/10 rounded-full p-2 pr-6 cursor-pointer">
             <div class="dark:bg-slate-200 w-fit rounded-full p-2">
               <img src="~~/assets/icon/twitter.svg" class="w-6 h-6" alt="github">
             </div>
