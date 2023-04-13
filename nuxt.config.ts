@@ -28,4 +28,10 @@ export default defineNuxtConfig({
       ],
     },
   },
+  content: {
+    highlight: {
+      theme: "dracula",
+    },
+    documentDriven: true,
+  },
 });
