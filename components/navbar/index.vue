@@ -1,8 +1,17 @@
 <script setup>
 const darkTheme = ref(false)
 const colorMode = useColorMode();
+const down = ref(false)
+
+function downDisabled() {
+  down.value = true
+  setTimeout(() => {
+    down.value = false
+  }, 500)
+}
 
 const changeTheme = (theme) => {
+  downDisabled()
   colorMode.preference = theme
   theme === 'dark' ? darkTheme.value = true : darkTheme.value = false
   localStorage.setItem('theme', theme)
@@ -20,7 +29,7 @@ onMounted(() => {
 
 <template>
   <nav
-    class="container mx-auto p-4 sm:py-6 flex justify-between items-center sticky top-0 bg-[#e9e4ce]/80 dark:bg-[#22222c]/80 backdrop-blur-sm">
+    class="container mx-auto p-4 sm:py-6 flex justify-between items-center sticky top-0 bg-[#e9e4ce]/80 dark:bg-[#22222c]/80 backdrop-blur-sm z-50">
     <ul>
       <li>
         <NuxtLink to="/"><strong class="text-2xl font-medium">kholishafid</strong></NuxtLink>
@@ -34,13 +43,32 @@ onMounted(() => {
         <NuxtLink to="/blog">Blog</NuxtLink>
       </li>
       <li>
-        <div class="w-10 h-10 bg-[#e9e4ce] grid place-items-center" v-if="darkTheme" @click="changeTheme('light')">
-          <img src="~~/assets/icon/sun-outline.svg" alt="light-theme" class="h-6 w-6">
+        <div class="w-10 h-10 bg-[#e9e4ce] grid place-items-center cursor-pointer" v-if="darkTheme"
+          @click="changeTheme('light')">
+          <img src="~/assets/icon/sun-outline.svg" alt="dark-theme" class="h-6 w-6" :class="{ changeAnim: down }">
         </div>
-        <div class="w-10 h-10 bg-[#22222c] grid place-items-center" v-if="!darkTheme" @click="changeTheme('dark')">
-          <img src="~~/assets/icon/moon-outline.svg" alt="dark-theme" class="h-6 w-6">
+        <div class="w-10 h-10 bg-[#22222c] grid place-items-center cursor-pointer" v-if="!darkTheme"
+          @click="changeTheme('dark')">
+          <img src="~/assets/icon/moon-outline.svg" alt="dark-theme" class="h-6 w-6" :class="{ changeAnim: down }">
         </div>
       </li>
     </ul>
   </nav>
 </template>
+
+<style scoped>
+.changeAnim {
+  animation: changeAnim 0.5s cubic-bezier(.56, .36, .47, .83);
+  transform: translate3d(0, 0, 0);
+}
+
+@keyframes changeAnim {
+  0% {
+    transform: translateY(-20px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
+</style>
