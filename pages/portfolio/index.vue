@@ -8,10 +8,10 @@ useHead({
 </script>
 
 <template>
-  <main class="px-8 sm:mb-20 mb-10 mt-6">
+  <main class="my-4">
     <ContentList path="/portfolio">
       <template v-slot="{ list }">
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-8 rounded-lg">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 rounded-lg">
           <div v-for="article in list" :key="article._path"
             class="bg-black/10 dark:bg-white/5 p-4 rounded hover:scale-105 transition-all">
             <div v-if="article.thumbnail" class="mb-4">

@@ -5,14 +5,14 @@ useHead({
     { name: 'description', content: 'kholishafid blog.' }
   ],
 });
-const query = await queryContent('blog').where('').sort({ contentIndex: -1 }).find()
+const query = await queryContent('blog').find();
 </script>
 
 <template>
-  <main class="px-4 max-w-6xl mx-auto">
+  <main class="my-4">
     <ContentList :query="query" path="/blog">
       <template v-slot="{ list }">
-        <div class="grid lg:grid-cols-2 gap-8 rounded-lg my-6">
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 rounded-lg my-6">
           <div v-for="article in list" :key="article._path"
             class="bg-black/5 dark:bg-white/5 p-4 rounded hover:scale-105 transition-all">
             <NuxtLink :to="article._path" class="gap-8">

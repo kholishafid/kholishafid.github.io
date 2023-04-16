@@ -54,7 +54,7 @@ Teknik ini saya rasa merupakan teknik paling populer untuk saat ini. Untuk cente
 
 Saya asumsikan bahwa kamu sudah menerapkan rule lain seperti width, height dengan begitu kamu hanya perlu menambah 3 line kode di element `.parent` dan boom maka element `.child` akan ada ditengah tengah element parentnya.
 
-Singkatnya `justify-content: center;` membuat element menengah secara horizontal dan `align-items: center;` menengah secara vertical. Kedua rule tersebut tidak berguna jika diterapkan pada element dengan display bukan flex. Detail tentang flex ada [disini]('https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Flexbox').
+Singkatnya `justify-content: center;` membuat element menengah secara horizontal dan `align-items: center;` menengah secara vertical. Kedua rule tersebut tidak berguna jika diterapkan pada element dengan display bukan flex. Detail tentang flex ada disini: :externalLink{href="https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Flexbox"}
 
 ## Grid
 

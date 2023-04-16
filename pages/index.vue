@@ -12,13 +12,13 @@ useHead({
     <div class="flex flex-col-reverse sm:flex gap-4 sm:flex-row items-center mb-6 sm:my-6 ">
       <hgroup class="flex-1 p-4">
         <h1 class="text-3xl sm:text-4xl md:text-5xl mb-8 font-cardo font-bold">Hello wellcome to my page.</h1>
-        <h3 class="text-lg md:text-2xl text-slate-700 dark:text-gray-300">Aku hafid , web developer pemula. Suka ngerjain
+        <h2 class="text-lg md:text-2xl text-slate-700 dark:text-gray-300">Aku hafid , web developer pemula. Suka ngerjain
           <code class="text-[#2965f1]">CSS</code> dan <code
             class="dark:text-[#f0db4f] bg-[#f0db4f] dark:bg-transparent text-black">JavaScript</code>.
-        </h3>
+        </h2>
       </hgroup>
       <div class="p-4 box-border sm:max-w-[350px] lg:max-w-[500px]">
-        <img src="~/assets/image/me-portait.svg" alt="portait" draggable="false">
+        <img src="~/assets/image/me-portait.svg" alt="portait" draggable="false" class="w-full h-full">
       </div>
     </div>
     <div class="my-6 sm:my-20 p-4">
@@ -40,47 +40,47 @@ useHead({
       <h1 class="text-2xl md:text-4xl mb-4 font-cardo font-bold">Skills</h1>
       <div class="grid lg:grid-cols-2 xl:grid-cols-3 gap-8">
         <div>
-          <h5 class="text-slate-800 dark:text-gray-200 text-xl md:text-2xl mb-4">Markup & Languange</h5>
+          <h2 class="text-slate-800 dark:text-gray-200 text-xl md:text-2xl mb-4">Markup & Languange</h2>
           <SkillList>
             <SkillItem label="HTML & CSS" level="Advance">
-              <img src="~/assets/image/html-css.svg" alt="html-css" class="w-12 md:w-16 rounded">
+              <img src="~/assets/image/html-css.svg" alt="html-css" class="w-12 sm:w-16 aspect-square rounded">
             </SkillItem>
             <SkillItem label="JavaScript" level="Intermediate">
-              <img src="~/assets/image/js-logo.svg" alt="javascript" class="w-12 sm:w-16 rounded">
+              <img src="~/assets/image/js-logo.svg" alt="javascript" class="w-12 sm:w-16 aspect-square rounded">
             </SkillItem>
             <SkillItem label="PHP" level="Intermediate">
-              <img src="~/assets/image/php-logo.svg" alt="php" class="w-12 sm:w-16 rounded">
+              <img src="~/assets/image/php-logo.svg" alt="php" class="w-12 sm:w-16 aspect-square rounded">
             </SkillItem>
           </SkillList>
         </div>
         <div>
-          <h5 class="text-slate-800 dark:text-gray-200 text-xl md:text-2xl mb-4">Technologies</h5>
+          <h2 class="text-slate-800 dark:text-gray-200 text-xl md:text-2xl mb-4">Technologies</h2>
           <SkillList>
             <SkillItem label="Vue & Nuxt" level="Intermediate">
-              <img src="~/assets/image/vue-nuxt.svg" alt="vue-nuxt" class="w-12 sm:w-16 rounded">
+              <img src="~/assets/image/vue-nuxt.svg" alt="vue-nuxt" class="w-12 sm:w-16 aspect-square rounded">
             </SkillItem>
             <SkillItem label="Laravel" level="Beginner">
-              <img src="~/assets/image/laravel-logo.svg" alt="laravel" class="w-12 sm:w-16 rounded">
+              <img src="~/assets/image/laravel-logo.svg" alt="laravel" class="w-12 sm:w-16 aspect-square rounded">
             </SkillItem>
             <SkillItem label="Tailwind" level="Intermediate">
-              <img src="~/assets/image/tailwind-logo.svg" alt="tailwind" class="w-12 sm:w-16 rounded">
+              <img src="~/assets/image/tailwind-logo.svg" alt="tailwind" class="w-12 sm:w-16 aspect-square rounded">
             </SkillItem>
             <SkillItem label="Laravel" level="Beginner">
-              <img src="~/assets/image/next-logo.svg" alt="next" class="w-12 sm:w-16 rounded">
+              <img src="~/assets/image/next-logo.svg" alt="next" class="w-12 sm:w-16 aspect-square rounded">
             </SkillItem>
           </SkillList>
         </div>
         <div class="h-full flex flex-col">
-          <h5 class="text-slate-800 dark:text-gray-200 text-xl md:text-2xl mb-4">Database & BaaS</h5>
+          <h2 class="text-slate-800 dark:text-gray-200 text-xl md:text-2xl mb-4">Database & BaaS</h2>
           <SkillList>
             <SkillItem label="MySQL" level="Intermediate">
-              <img src="~/assets/image/mysql-logo.svg" alt="mysql" class="w-12 sm:w-16 rounded">
+              <img src="~/assets/image/mysql-logo.svg" alt="mysql" class="w-12 sm:w-16 aspect-square rounded">
             </SkillItem>
             <SkillItem label="PostgreSQL" level="Beginner">
-              <img src="~/assets/image/postgreesql.svg" alt="postgree" class="w-12 sm:w-16 rounded">
+              <img src="~/assets/image/postgreesql.svg" alt="postgree" class="w-12 sm:w-16 aspect-square rounded">
             </SkillItem>
             <SkillItem label="Supabase" level="Beginner">
-              <img src="~/assets/image/supabase.svg" alt="supabase" class="w-12 sm:w-16 rounded">
+              <img src="~/assets/image/supabase.svg" alt="supabase" class="w-12 sm:w-16 aspect-square rounded">
             </SkillItem>
           </SkillList>
         </div>
