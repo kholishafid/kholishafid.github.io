@@ -8,7 +8,7 @@
           </div>
           <h1>{{ doc.title }}</h1>
           <p>{{ doc.date }}</p>
-          <Toc />
+          <Toc :toc="doc.body.toc.links" />
           <p>{{ doc.description }}</p>
           <ContentRenderer :value="doc" />
         </div>

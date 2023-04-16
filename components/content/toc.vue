@@ -1,12 +1,14 @@
 <script setup>
-const { toc } = useContent()
+const props = defineProps({
+  toc: Array
+})
 </script>
 
 <template>
   <details class="cursor-pointer">
     <summary>Table of contents: </summary>
-    <ol v-if="toc && toc.links" class="text-base m-0">
-      <li v-for="link in toc.links" :key="link.text">
+    <ol v-if="toc" class="text-base m-0">
+      <li v-for="link in toc" :key="link.text">
         <a :href="`#${link.id}`">
           {{ link.text }}
         </a>
