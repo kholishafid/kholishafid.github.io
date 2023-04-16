@@ -32,6 +32,5 @@ export default defineNuxtConfig({
     highlight: {
       theme: "dracula",
     },
-    documentDriven: true,
   },
 });
