@@ -2,10 +2,12 @@ html[class="dark"] {
   background-color: #22222c;
   color: #fff;
 }
+
 html[class="light"] {
   background-color: #e9e4ce;
   color: #22222c;
 }
+
 body {
   font-family: "Hind", sans-serif;
   overflow-y: scroll;

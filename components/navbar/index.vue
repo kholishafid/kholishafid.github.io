@@ -1,41 +1,45 @@
 <script setup>
-const darkTheme = ref(false)
+const darkTheme = ref(false);
 const colorMode = useColorMode();
-const down = ref(false)
+const down = ref(false);
 
 function downDisabled() {
-  down.value = true
+  down.value = true;
   setTimeout(() => {
-    down.value = false
-  }, 500)
+    down.value = false;
+  }, 500);
 }
 
 const changeTheme = (theme) => {
-  downDisabled()
-  colorMode.preference = theme
-  theme === 'dark' ? darkTheme.value = true : darkTheme.value = false
-  localStorage.setItem('theme', theme)
-}
+  downDisabled();
+  colorMode.preference = theme;
+  theme === "dark" ? (darkTheme.value = true) : (darkTheme.value = false);
+  localStorage.setItem("theme", theme);
+};
 
 onMounted(() => {
-  const theme = localStorage.getItem('theme');
+  const theme = localStorage.getItem("theme");
   if (theme) {
-    theme === 'dark' ? changeTheme('dark') : changeTheme('light')
+    theme === "dark" ? changeTheme("dark") : changeTheme("light");
   } else {
-    changeTheme('light')
+    changeTheme("light");
   }
-})
+});
 </script>
 
 <template>
-  <nav class=" p-4 sm:py-6  sticky top-0 bg-[#e9e4ce]/80 dark:bg-[#22222c]/80 backdrop-blur-sm z-50">
+  <nav
+    class="container mx-auto py-4 sticky top-0 bg-[#e9e4ce]/80 dark:bg-[#22222c]/80 backdrop-blur-sm z-50"
+  >
     <div class="container mx-auto flex justify-between items-center">
       <ul>
         <li>
-          <NuxtLink to="/"><strong class="text-2xl font-medium">kholishafid</strong></NuxtLink>
+          <NuxtLink to="/">
+            <strong class="text-2xl font-medium">kholishafid</strong>
+          </NuxtLink>
         </li>
       </ul>
-      <ul class="flex sm:gap-6 gap-4 flex-row items-center text-lg sm:text-xl">
+      <ul class="flex sm:gap-6 gap-3 flex-row items-center text-lg sm:text-xl">
         <li>
           <NuxtLink to="/portfolio">Portfolio</NuxtLink>
         </li>
@@ -43,13 +47,29 @@ onMounted(() => {
           <NuxtLink to="/blog">Blog</NuxtLink>
         </li>
         <li>
-          <div class="w-10 h-10 bg-[#e9e4ce] grid place-items-center cursor-pointer" v-if="darkTheme"
-            @click="changeTheme('light')">
-            <img src="~/assets/icon/sun-outline.svg" alt="dark-theme" class="h-6 w-6" :class="{ changeAnim: down }">
+          <div
+            class="w-8 sm:w-10 h-8 sm:h-10 bg-[#e9e4ce] grid place-items-center cursor-pointer rounded"
+            v-if="darkTheme"
+            @click="changeTheme('light')"
+          >
+            <img
+              src="~/assets/icon/sun-outline.svg"
+              alt="dark-theme"
+              class="w-5 sm:w-6"
+              :class="{ changeAnim: down }"
+            />
           </div>
-          <div class="w-10 h-10 bg-[#22222c] grid place-items-center cursor-pointer" v-if="!darkTheme"
-            @click="changeTheme('dark')">
-            <img src="~/assets/icon/moon-outline.svg" alt="dark-theme" class="h-6 w-6" :class="{ changeAnim: down }">
+          <div
+            class="w-8 sm:w-10 h-8 sm:h-10 bg-[#22222c] grid place-items-center cursor-pointer rounded"
+            v-if="!darkTheme"
+            @click="changeTheme('dark')"
+          >
+            <img
+              src="~/assets/icon/moon-outline.svg"
+              alt="dark-theme"
+              class="w-5 sm:w-6"
+              :class="{ changeAnim: down }"
+            />
           </div>
         </li>
       </ul>
@@ -59,7 +79,7 @@ onMounted(() => {
 
 <style scoped>
 .changeAnim {
-  animation: changeAnim 0.5s cubic-bezier(.56, .36, .47, .83);
+  animation: changeAnim 0.5s cubic-bezier(0.56, 0.36, 0.47, 0.83);
   transform: translate3d(0, 0, 0);
 }
 
