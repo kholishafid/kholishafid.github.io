@@ -1,6 +1,11 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  modules: ["@nuxt/content", "@nuxtjs/tailwindcss", "@nuxtjs/color-mode", '@nuxt/image-edge'],
+  modules: [
+    "@nuxt/content",
+    "@nuxtjs/tailwindcss",
+    "@nuxtjs/color-mode",
+    "@nuxt/image-edge",
+  ],
   ssr: true,
   css: ["@/assets/css/global.css"],
   colorMode: {
@@ -32,5 +37,8 @@ export default defineNuxtConfig({
     highlight: {
       theme: "dracula",
     },
+  },
+  image: {
+    domain: ["unsplash.com", "source.unsplash.com"],
   },
 });
