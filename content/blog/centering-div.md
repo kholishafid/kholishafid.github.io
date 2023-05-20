@@ -1,5 +1,5 @@
 ---
-title: "3 Cara buat Centering <div />."
+title: "3 Cara Centering <div />."
 description: "Oke kali ini kita bahas tentang cara centering div atau element block lain, dimana topik ini sempat jadi meme loh 🤣."
 thumbnail: "/blog-thumbnail/nengahindiv.svg"
 date: "13 April 2023"
