@@ -13,7 +13,7 @@ defineProps({
 </script>
 
 <template>
-  <a :href="href" :target="target">
+  <NuxtLink :external="true" :to="href" :target="target">
     link.
-  </a>
+  </NuxtLink>
 </template>
