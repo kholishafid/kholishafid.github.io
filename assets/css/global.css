@@ -5,7 +5,7 @@ html[class="dark"] {
 
 html[class="light"] {
   background-color: #e9e4ce;
-  color: #22222c;
+  color: #111827;
 }
 
 body {
@@ -39,13 +39,14 @@ html[class="dark"] ::selection {
 }
 
 /* Track */
-::-webkit-scrollbar-track {
-  background: #d1d1c3;
+html[class="dark"] ::-webkit-scrollbar-track {
+  background: #22222c;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #ef233c;
+  background: #e9e4ce;
+  border-radius: 4px;
 }
 
 /* Handle on hover */

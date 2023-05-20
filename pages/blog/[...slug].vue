@@ -1,12 +1,20 @@
+<script setup>
+definePageMeta({
+  layout: 'blog'
+})
+</script>
 <template>
-  <div class="px-4 max-w-4xl mx-auto h-full mt-6 mb-8">
+  <div>
     <ContentDoc>
       <template v-slot="{ doc }">
-        <div class="prose sm:prose-xl max-w-none prose-p:font-hind dark:prose-invert prose-headings:font-cardo">
-          <div v-if="doc.thumbnail" class="mb-8">
-            <img :src="doc.thumbnail" alt="thumbnail" class="w-full h-[350px] object-cover rounded-md" draggable="false">
-          </div>
-          <h1>{{ doc.title }}</h1>
+        <div class="prose-p:font-hind dark:prose-invert prose-headings:font-cardo">
+          <nuxt-img
+            v-if="doc.thumbnail"
+            :src="doc.thumbnail" 
+            alt="thumbnail" 
+            class="w-full aspect-video lg:h-[400px] object-cover rounded-md" draggable="false" 
+          />
+          <h2>{{ doc.title }}</h2>
           <p>{{ doc.date }}</p>
           <Toc :toc="doc.body.toc.links" />
           <p>{{ doc.description }}</p>

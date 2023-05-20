@@ -28,18 +28,16 @@ onMounted(() => {
 </script>
 
 <template>
-  <nav
-    class="container mx-auto py-4 sticky top-0 bg-[#e9e4ce]/80 dark:bg-[#22222c]/80 backdrop-blur-sm z-50"
-  >
-    <div class="container mx-auto flex justify-between items-center">
+  <nav class="container-base py-4 sticky top-0 bg-[#e9e4ce]/80 dark:bg-[#22222c]/80 backdrop-blur-sm z-50">
+    <div class="container px-4 mx-auto flex justify-between items-center">
       <ul>
         <li>
           <NuxtLink to="/">
-            <strong class="text-2xl font-medium">kholishafid</strong>
+            <strong class="text-xl md:text-2xl font-medium">kholishafid</strong>
           </NuxtLink>
         </li>
       </ul>
-      <ul class="flex sm:gap-6 gap-3 flex-row items-center text-lg sm:text-xl">
+      <ul class="flex sm:gap-6 gap-3 flex-row items-center sm:text-xl">
         <li>
           <NuxtLink to="/portfolio">Portfolio</NuxtLink>
         </li>
@@ -47,29 +45,13 @@ onMounted(() => {
           <NuxtLink to="/blog">Blog</NuxtLink>
         </li>
         <li>
-          <div
-            class="w-8 sm:w-10 h-8 sm:h-10 bg-[#e9e4ce] grid place-items-center cursor-pointer rounded"
-            v-if="darkTheme"
-            @click="changeTheme('light')"
-          >
-            <img
-              src="~/assets/icon/sun-outline.svg"
-              alt="dark-theme"
-              class="w-5 sm:w-6"
-              :class="{ changeAnim: down }"
-            />
+          <div class="w-8 sm:w-10 h-8 sm:h-10 bg-[#e9e4ce] grid place-items-center cursor-pointer rounded"
+            v-if="darkTheme" @click="changeTheme('light')">
+            <img src="~/assets/icon/sun-outline.svg" alt="dark-theme" class="w-5 sm:w-6" :class="{ changeAnim: down }" />
           </div>
-          <div
-            class="w-8 sm:w-10 h-8 sm:h-10 bg-[#22222c] grid place-items-center cursor-pointer rounded"
-            v-if="!darkTheme"
-            @click="changeTheme('dark')"
-          >
-            <img
-              src="~/assets/icon/moon-outline.svg"
-              alt="dark-theme"
-              class="w-5 sm:w-6"
-              :class="{ changeAnim: down }"
-            />
+          <div class="w-8 sm:w-10 h-8 sm:h-10 bg-[#22222c] grid place-items-center cursor-pointer rounded"
+            v-if="!darkTheme" @click="changeTheme('dark')">
+            <img src="~/assets/icon/moon-outline.svg" alt="dark-theme" class="w-5 sm:w-6" :class="{ changeAnim: down }" />
           </div>
         </li>
       </ul>
