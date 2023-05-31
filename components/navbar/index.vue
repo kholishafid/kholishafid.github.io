@@ -60,6 +60,17 @@ onMounted(() => {
 </template>
 
 <style scoped>
+html[class="dark"] .router-link-active {
+  text-decoration-color: #e9e4ce;
+
+}
+.router-link-active {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-color: #22222c;
+  text-decoration-thickness: 1.5px;
+}
+
 .changeAnim {
   animation: changeAnim 0.5s cubic-bezier(0.56, 0.36, 0.47, 0.83);
   transform: translate3d(0, 0, 0);
