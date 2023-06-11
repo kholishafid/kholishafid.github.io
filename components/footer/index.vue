@@ -1,11 +1,5 @@
 <template>
-  <footer class="py-4 md:py-6 lg:py-8 flex justify-center">
-    <div class="flex-1 flex items-center gap-4">
-      <hr class="border border-slate-800/10 dark:border-white/5 flex-1">
-      <div class="sm:text-lg">
-        2023 @kholishafid
-      </div>
-      <hr class="border border-slate-800/10 dark:border-white/5 flex-1">
-    </div>
+  <footer class="py-4 flex justify-center text-sm">
+    <div class="font-semibold">2023 @kholishafid</div>
   </footer>
 </template>

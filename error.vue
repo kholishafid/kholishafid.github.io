@@ -1,40 +1,44 @@
 <script setup>
 const props = defineProps({
-  error: Object
-})
+  error: Object,
+});
 
 const timer = ref(4);
 let interval;
 let timeout;
-const redirectBack = () => clearError({ redirect: '/' })
+const redirectBack = () => clearError({ redirect: "/" });
 
 onMounted(() => {
   interval = setInterval(() => {
-    timer.value -= 1
+    timer.value -= 1;
   }, 1000);
-  timeout =
-    setTimeout(() => {
-      redirectBack()
-    }, 4000);
-})
+  timeout = setTimeout(() => {
+    redirectBack();
+  }, 4000);
+});
 
 onUnmounted(() => {
   clearInterval(interval);
   clearTimeout(timeout);
-})
-
+});
 </script>
 
 <template>
-  <main class="grid place-items-center h-screen">
-    <div class="sm:flex items-center">
-      <div class="text-center">
-        <h1 class="text-6xl sm:text-8xl font-cardo font-bold mb-2">{{ error.statusCode }}</h1>
-        <p class="sm:text-xl">{{ error.message }}</p>
-        <p class="sm:text-xl">Redirect in {{ timer }}</p>
+  <main class="grid place-items-center h-screen bg-black/10">
+    <div class="bg-light-background rounded-lg">
+      <div class="text-center pb-6 px-8">
+        <img
+          src="~~/assets/image/cats.svg"
+          alt="cats"
+          class="w-[250px] aspect-square object-cover mx-auto"
+        />
+        <h1 class="text-light-accent font-bold text-2xl">
+          {{ error.statusCode }}
+        </h1>
+        <p>{{ error.message }}</p>
       </div>
-      <div>
-        <img src="~~/assets/image/cats.svg" alt="cats" class="w-[200px] sm:w-[300px] aspect-square object-cover">
+      <div class="border-t py-2 text-center text-light-primary">
+        <p>Redirect in {{ timer }}</p>
       </div>
     </div>
   </main>

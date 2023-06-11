@@ -1,66 +1,30 @@
 html[class="dark"] {
-  background-color: #22222c;
+  background-color: #1C1C1E;
   color: #fff;
 }
 
+body::-webkit-scrollbar {
+  display: none;
+}
+
 html[class="light"] {
-  background-color: #e9e4ce;
-  color: #111827;
+  background-color: #F2F2F7;
+  color: #000;
 }
 
 body {
-  font-family: "Hind", sans-serif;
-  overflow-y: scroll;
+  font-family: 'Open Sans', sans-serif;
 }
 
-html[class="light"] ::-moz-selection {
-  color: white;
-  background: #22222c;
-}
-
-html[class="light"] ::selection {
-  color: white;
-  background: #22222c;
-}
-
-html[class="dark"] ::-moz-selection {
-  color: #22222c;
-  background: #e9e4ce;
-}
-
-html[class="dark"] ::selection {
-  color: #22222c;
-  background: #e9e4ce;
-}
-
-/* width */
-::-webkit-scrollbar {
-  width: 10px;
-}
-
-/* Track */
-html[class="dark"] ::-webkit-scrollbar-track {
-  background: #22222c;
-}
-
-/* Handle */
-::-webkit-scrollbar-thumb {
-  background: #e9e4ce;
-  border-radius: 4px;
-}
-
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-  background: #d90429;
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: 'Lato', sans-serif;
 }
 
 .page-enter-active,
 .page-leave-active {
-  transition: all 0.3s;
-}
-
-.page-enter-from,
-.page-leave-to {
-  opacity: 0;
-  filter: blur(1rem);
+  transition: all 0.2s;
 }

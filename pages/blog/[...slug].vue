@@ -1,35 +1,28 @@
-<script setup>
-definePageMeta({
-  layout: 'blog'
-})
-</script>
 <template>
-  <div>
+  <div class="p-4 md:p-8">
     <ContentDoc>
       <template v-slot="{ doc }">
-        <div class="prose-p:font-hind dark:prose-invert prose-headings:font-cardo">
-          <nuxt-img
-            v-if="doc.thumbnail"
-            :src="doc.thumbnail" 
-            alt="thumbnail" 
-            class="w-full aspect-video lg:h-[400px] object-cover rounded-md" draggable="false" 
+        <div
+          class="prose prose-p:font-open-sans dark:prose-invert max-w-full prose-headings:font-lato prose-blue"
+        >
+          <NuxtImg
+            :src="doc.thumbnail"
+            format="webp"
+            :alt="doc.title"
+            class="w-full max-h-[350px] object-cover rounded"
           />
-          <h2>{{ doc.title }}</h2>
+          <h1>{{ doc.title }}</h1>
           <p>{{ doc.date }}</p>
-          <Toc :toc="doc.body.toc.links" />
           <p>{{ doc.description }}</p>
+          <Toc :toc="doc.body.toc.links" />
           <ContentRenderer :value="doc" />
         </div>
       </template>
       <template #not-found>
-        <div class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-12">
-          <p class="text-xl">Maaf artikel yang anda minta tidak ditemukan.</p>
-        </div>
+        <p>Maaf artikel yang anda cari tidak ditemukan.</p>
       </template>
       <template #empty>
-        <div class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-12">
-          <p>Artikel ini kosong.</p>
-        </div>
+        <p>Artikel ini kosong.</p>
       </template>
     </ContentDoc>
   </div>

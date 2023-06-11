@@ -4,12 +4,23 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        backgroud: "#22222c",
-        primary: "#ef233c",
+        "dark-primary": "#0A84FF",
+        "dark-secondary": "#30D158",
+        "dark-accent": "#FF453A",
+        "dark-background": "#1C1C1E",
+        "dark-paragraph": "#FFFFFF",
+        "dark-subtext": "#8E8E93",
+        "light-primary": "#007AFF",
+        "light-secondary": "#34C759",
+        "light-accent": "#FF3B30",
+        "light-background": "#F2F2F7",
+        "light-paragraph": "#000000",
+        "light-subtext": "#666666"
       },
       fontFamily: {
-        cardo: "'Cardo', serif",
-        hind: "'Hind', sans-serif",
+        lato: "'Lato', sans-serif",
+        roboto: "'Roboto', sans-serif",
+        "open-sans": "'Open Sans', sans-serif",
       },
     },
   },
