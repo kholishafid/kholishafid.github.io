@@ -18,16 +18,18 @@ useHead({
 </script>
 
 <template>
-  <div
-    class="prose prose-p:font-open-sans prose-headings:font-lato max-w-full dark:prose-invert pt-20 pb-6 px-4 md:px-8"
-  >
+  <div class="prose prose-p:font-open-sans prose-headings:font-lato max-w-full dark:prose-invert pt-20 pb-6 px-4 md:px-8">
     <article>
       <h1>Hai 🙋‍♂️</h1>
-      <p>Saya Hafid, Junior FrontEnd Developer.</p>
+      <p>Aku Hafid, Junior FrontEnd Developer.</p>
       <p>19 tahun, Lulusan SMK Rekayasa Perangkat Lunak.</p>
       <p>
         Aku suka menerjemahkan desain ke UI, aku enjoy mengerjakanya dengan
         Javascript.
+      </p>
+      <p>
+        🌱 I'm currently learning React and TypeScript, I'm having fun with Vue and love playing with new frontend
+        frameworks like Solid.js.
       </p>
     </article>
 
@@ -37,11 +39,7 @@ useHead({
         <p>Markup & Languange</p>
         <SkillList>
           <SkillItem label="HTML & CSS" level="Advance" :icon="HTMLIcon" />
-          <SkillItem
-            label="JavaScript"
-            level="Intermediate"
-            :icon="JavaScriptIcon"
-          />
+          <SkillItem label="JavaScript" level="Intermediate" :icon="JavaScriptIcon" />
           <SkillItem label="PHP" level="Intermediate" :icon="PHPIcon" />
         </SkillList>
       </div>
@@ -50,11 +48,7 @@ useHead({
         <SkillList>
           <SkillItem label="Nuxt.js" level="Intermediate" :icon="NuxtIcon" />
           <SkillItem label="Laravel" level="Beginner" :icon="LaravelIcon" />
-          <SkillItem
-            label="Tailwind"
-            level="Intermediate"
-            :icon="TailwindCSSIcon"
-          />
+          <SkillItem label="Tailwind" level="Intermediate" :icon="TailwindCSSIcon" />
           <SkillItem label="Next.js" level="Beginner" :icon="NextIcon" />
         </SkillList>
       </div>
@@ -71,9 +65,7 @@ useHead({
       <h3>Get in Touch</h3>
       <p>
         Reach me via email at
-        <a class="font-semibold" href="mailto:hafidnkholis@gmail.com"
-          >hafidnkholis@gmail.com</a
-        >
+        <a class="font-semibold" href="mailto:hafidnkholis@gmail.com">hafidnkholis@gmail.com</a>
         or on my social:
       </p>
       <ul class="prose-li:list-decimal prose-blue">
@@ -85,10 +77,7 @@ useHead({
         </li>
         <li>
           Linkedin :
-          <a
-            href="https://www.linkedin.com/in/hafid-nur-kholis-833195248/"
-            target="_blank"
-          >
+          <a href="https://www.linkedin.com/in/hafid-nur-kholis-833195248/" target="_blank">
             Hafid Nur Kholis
           </a>
         </li>
