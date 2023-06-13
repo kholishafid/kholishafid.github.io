@@ -9,16 +9,11 @@ defineProps<{
     thumbnail: string;
   };
 }>();
-
-const closePopUp = (event: Event) => {
-  event.stopPropagation()
-}
 </script>
 
 <template>
-  <div class="h-full p-4 hover:bg-black/5 dark:hover:bg-white/5">
-    <NuxtLink :external="true" :href="article.link" target="_blank"
-      class="flex flex-col justify-between md:pointer-events-none">
+  <div class="h-full p-4 hover:bg-black/5 dark:hover:bg-white/5 flex flex-col justify-between ">
+    <NuxtLink :external="true" :href="article.link" target="_blank" class="md:pointer-events-none">
       <div class="mb-4">
         <h2 class="font-semibold dark:text-white mb-2">
           {{ article.title }}
@@ -35,7 +30,7 @@ const closePopUp = (event: Event) => {
         'w-1/2 aspect-video': show === true,
       }" />
     </div>
-    <div class="hidden gap-1 md:flex">
+    <div class="hidden gap-1 md:flex h-fit">
       <TheButton :variant="'primary'" @buttonClicked="show = true">Show</TheButton>
       <TheButton :variant="'success'">
         <NuxtLink :href="article.link" :external="true" target="_blank">
