@@ -12,7 +12,6 @@ export default defineNuxtConfig({
     classSuffix: "",
   },
   app: {
-    baseURL: "/kholishafid.github.io/",
     pageTransition: { name: "page", mode: "out-in" },
     head: {
       title: "kholishafid",
