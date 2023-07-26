@@ -1,4 +1,6 @@
 <script setup>
+import { PortfolioList } from '@/store/portfolio';
+
 useHead({
   title: "kholishafid | portfolio",
 });
@@ -6,19 +8,13 @@ useHead({
 
 <template>
   <div class="md:p-4">
-    <ContentList path="/portfolio">
-      <template v-slot="{ list }">
-        <section class="grid md:grid-cols-3">
-          <PortfolioCard
-            v-for="article in list"
-            :key="article._path"
-            :article="article"
-          />
-        </section>
-      </template>
-      <template #not-found>
-        <p>Belum ada portofolio terbaru.</p>
-      </template>
-    </ContentList>
+
+    <section class="grid md:grid-cols-3">
+      <PortfolioCard
+        v-for="portfolio in PortfolioList"
+        :key="portfolio.title"
+        :article="portfolio"
+      />
+    </section>
   </div>
 </template>
