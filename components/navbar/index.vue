@@ -1,8 +1,8 @@
-<script setup>
-const darkTheme = ref(false);
+<script setup lang="ts">
+const darkTheme = ref<boolean>(false);
 const colorMode = useColorMode();
-const down = ref(false);
-const time = ref(
+const down = ref<boolean>(false);
+const time = ref<string>(
   `${new Date().getHours()}:${new Date().getMinutes()}:${new Date().getSeconds()}`
 );
 
@@ -17,14 +17,15 @@ function downDisabled() {
   }, 500);
 }
 
-const changeTheme = (theme) => {
+const changeTheme = (theme: string) => {
   downDisabled();
   colorMode.preference = theme;
   theme === "dark" ? (darkTheme.value = true) : (darkTheme.value = false);
   localStorage.setItem("theme", theme);
 };
 
-let timeInterval;
+let timeInterval: NodeJS.Timer;
+
 onMounted(() => {
   const theme = localStorage.getItem("theme");
   if (theme) {
@@ -43,19 +44,18 @@ onUnmounted(() => {
 </script>
 
 <template>
-  <nav
-    class="mt-4 max-w-4xl mx-auto flex justify-between bg-light-background dark:bg-dark-background relative"
-  >
+  <nav class="mt-4 max-w-4xl mx-auto flex justify-between bg-light-background dark:bg-dark-background relative">
     <ul>
       <li>
-        <NuxtLink to="/" class="px-2 py-2 md:px-4 md:py-3 rounded-t-lg block">
+        <NuxtLink
+          to="/"
+          class="px-2 py-2 md:px-4 md:py-3 rounded-t-lg block"
+        >
           <strong class="font-medium">kholishafid</strong>
         </NuxtLink>
       </li>
     </ul>
-    <div
-      class="hidden md:block text-sm absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 font-medium"
-    >
+    <div class="hidden md:block text-sm absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 font-medium">
       {{ time }}
     </div>
     <ul class="flex flex-row items-center">
@@ -63,25 +63,29 @@ onUnmounted(() => {
         <NuxtLink
           to="/portfolio"
           class="px-2 py-2 md:px-4 md:py-3 rounded-t-lg block"
-          >Portfolio</NuxtLink
-        >
+        >Portfolio</NuxtLink>
       </li>
       <li>
         <NuxtLink
           to="/blog"
           class="px-2 py-2 md:px-4 md:py-3 rounded-t-lg block"
-          >Blog</NuxtLink
-        >
+        >Blog</NuxtLink>
       </li>
       <li>
-        <div v-if="!darkTheme" @click="changeTheme('dark')">
+        <div
+          v-if="!darkTheme"
+          @click="changeTheme('dark')"
+        >
           <img
             src="~/assets/icon/sun-outline.svg"
             alt="dark-theme"
             class="w-6 sm:w-6 p-2 mx-1 box-content cursor-pointer"
           />
         </div>
-        <div v-if="darkTheme" @click="changeTheme('light')">
+        <div
+          v-if="darkTheme"
+          @click="changeTheme('light')"
+        >
           <img
             src="~/assets/icon/moon-outline.svg"
             alt="dark-theme"
