@@ -1,7 +1,7 @@
 ---
 title: "Setup Vue 3 + Vite "
 description: "Begini cara setup vue 3 dengan vite."
-thumbnail: "/blog-thumbnail/vue+vite.svg"
+thumbnail: "/blog-thumbnail/vuevite.svg"
 date: "23 Juli 2023"
 contentIndex: 3
 ---
