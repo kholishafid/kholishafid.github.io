@@ -1,8 +1,15 @@
-<script setup>
+<script setup lang="ts">
+import type { QueryBuilderParams } from '@nuxt/content/dist/runtime/types'
+
 useHead({
   title: "kholishafid | blog",
 });
-const query = await queryContent("blog").sort({ contentIndex: -1 }).find();
+
+const query: QueryBuilderParams = { path: '/blog', sort: [{ contentIndex: -1 }] }
+
+const handleRead = (path: string) => {
+  navigateTo(path)
+}
 </script>
 
 <template>
@@ -11,7 +18,8 @@ const query = await queryContent("blog").sort({ contentIndex: -1 }).find();
       <template v-slot="{ list }">
         <div class="grid grid-cols-1 md:grid-cols-2">
           <div v-for="article in list" :key="article._path">
-            <NuxtLink :to="article._path" class="flex flex-col-reverse gap-3 hover:bg-black/5 p-4 dark:hover:bg-white/5">
+            <div class="flex flex-col-reverse gap-3 hover:bg-black/5 p-4 dark:hover:bg-white/5"
+              @click="handleRead(article._path)">
               <div class="flex flex-col justify-center">
                 <h2 class="font-semibold dark:text-white mb-1">
                   {{ article.title }}
@@ -23,7 +31,7 @@ const query = await queryContent("blog").sort({ contentIndex: -1 }).find();
                   {{ article.description }}
                 </p>
               </div>
-            </NuxtLink>
+            </div>
           </div>
         </div>
       </template>
