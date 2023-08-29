@@ -28,7 +28,7 @@ export const PortfolioList: Portoflio[] = [
   {
     title: "HN Client",
     description: 'Hacker news simple client',
-    link: 'https://hacker-news-henna.vercel.app/',
+    link: 'https://hackerns.vercel.app/',
     thumbnail: 'hacknews.png'
   },
   {
