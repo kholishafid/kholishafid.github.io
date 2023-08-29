@@ -1,14 +1,4 @@
-<script setup>
-import NuxtIcon from "@/assets/icon/nuxt.svg";
-import NextIcon from "@/assets/icon/next.svg";
-import HTMLIcon from "@/assets/icon/html.svg";
-import JavaScriptIcon from "@/assets/icon/javascript.svg";
-import LaravelIcon from "@/assets/icon/laravel.svg";
-import MySQLIcon from "@/assets/icon/mysql.svg";
-import PHPIcon from "@/assets/icon/php.svg";
-import PostgreSQL from "@/assets/icon/postgresql.svg";
-import TailwindCSSIcon from "@/assets/icon/tailwind.svg";
-
+<script setup lang="ts">
 useHead({
   title: "kholishafid",
   meta: [
@@ -21,42 +11,33 @@ useHead({
   <div class="prose prose-p:font-open-sans prose-headings:font-lato max-w-full dark:prose-invert pt-20 pb-6 px-4 md:px-8">
     <article>
       <h1>Hai 🙋‍♂️</h1>
-      <p>Aku Hafid, Junior FrontEnd Developer.</p>
-      <p>19 tahun, Lulusan SMK Rekayasa Perangkat Lunak.</p>
+      <p>I'm Hafid, Junior FrontEnd Developer.</p>
       <p>
-        Aku suka menerjemahkan desain ke UI, aku enjoy mengerjakanya dengan
-        Javascript.
-      </p>
-      <p>
-        🌱 I'm currently learning React and TypeScript, I'm having fun with Vue and love playing with new frontend
+        🌱 Currently learning React and TypeScript, I'm having fun with Vue and love playing with new frontend
         frameworks like Solid.js.
       </p>
     </article>
 
     <article>
-      <h3>Skills</h3>
+      <h3>Skillset</h3>
       <div>
         <p>Markup & Languange</p>
         <SkillList>
-          <SkillItem label="HTML & CSS" level="Advance" :icon="HTMLIcon" />
-          <SkillItem label="JavaScript" level="Intermediate" :icon="JavaScriptIcon" />
-          <SkillItem label="PHP" level="Intermediate" :icon="PHPIcon" />
+          <SkillItem label="HTML & CSS" level="Advanced" icon-url="https://api.iconify.design/logos/html-5.svg" />
+          <SkillItem label="Javascript" level="Intermediate" icon-url="https://api.iconify.design/logos/javascript.svg" />
+          <SkillItem label="Typescript" level="Beginner"
+            icon-url="https://api.iconify.design/logos/typescript-icon.svg" />
         </SkillList>
       </div>
       <div>
         <p>Technologies</p>
         <SkillList>
-          <SkillItem label="Nuxt.js" level="Intermediate" :icon="NuxtIcon" />
-          <SkillItem label="Laravel" level="Beginner" :icon="LaravelIcon" />
-          <SkillItem label="Tailwind" level="Intermediate" :icon="TailwindCSSIcon" />
-          <SkillItem label="Next.js" level="Beginner" :icon="NextIcon" />
-        </SkillList>
-      </div>
-      <div>
-        <p>Database</p>
-        <SkillList>
-          <SkillItem label="MySQL" level="Intermediate" :icon="MySQLIcon" />
-          <SkillItem label="PostgreSQL" level="Beginner" :icon="PostgreSQL" />
+          <SkillItem label="Nuxt.js" level="Beginner" icon-url="https://api.iconify.design/logos/nuxt-icon.svg" />
+          <SkillItem label="Next.js" level="Beginner" icon-url="https://api.iconify.design/logos/nextjs-icon.svg" />
+          <SkillItem label="Tailwind" level="Intermediate"
+            icon-url="https://api.iconify.design/logos/tailwindcss-icon.svg" />
+          <SkillItem label="Vue" level="Intermediate" icon-url="https://api.iconify.design/logos/vue.svg" />
+          <SkillItem label="React" level="Beginner" icon-url="https://api.iconify.design/logos/react.svg" />
         </SkillList>
       </div>
     </article>

@@ -1,19 +1,15 @@
-<script setup>
-defineProps({
-  label: String,
-  level: String,
-  icon: String
-})
+<script setup lang="ts">
+defineProps<{
+  level: 'Beginner' | 'Intermediate' | 'Advanced',
+  label: string,
+  iconUrl: string
+}>()
 </script>
 
 <template>
   <div class="flex items-center gap-4 lg:w-full">
     <div class="not-prose">
-      <img
-        :src="icon"
-        :alt="label"
-        class="w-8 aspect-square"
-      >
+      <div class="w-8 aspect-square" :style="`background: url(${iconUrl}) no-repeat center center / contain;`"></div>
     </div>
     <div class="flex flex-col justify-center">
       <span class="font-semibold">{{ label }}</span>
