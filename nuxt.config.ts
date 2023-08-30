@@ -41,4 +41,7 @@ export default defineNuxtConfig({
   image: {
     domain: ["unsplash.com", "source.unsplash.com"],
   },
+  generate: {
+    routes: ["/blog/centering-div", "/blog/vue-vite", "/blog/pertama"],
+  },
 });
