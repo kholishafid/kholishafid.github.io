@@ -32,6 +32,11 @@ export const PortfolioList: Portoflio[] = [
     thumbnail: 'hacknews.png'
   },
   {
+    title: "Noted",
+    description: 'A simple note taking app.',
+    link: 'https://note-take.vercel.app/',
+  },
+  {
     title: "Yoshida Hiroshi Gallery",
     description: "Image Gallery build with Nextjs.",
     link: "https://yoshida-hiroshi-gallery.vercel.app/",
