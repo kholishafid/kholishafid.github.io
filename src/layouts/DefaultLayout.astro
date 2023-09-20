@@ -1,0 +1,27 @@
+---
+import Clock from '../components/Clock.vue'
+const { title } = Astro.props
+import Navbar from '../components/Navbar.astro'
+---
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>kholishafid | {title}</title>
+    <link rel="stylesheet" type="text/css" href="https://unpkg.com/@phosphor-icons/web@2.0.3/src/duotone/style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-element-bundle.min.js"></script>
+  </head>
+  <body class="bg-background flex flex-col min-h-screen">
+    <Navbar />
+    <div class="flex-1 my-16">
+      <slot />
+    </div>
+    <footer class="py-6 container max-w-prose mx-auto relative flex justify-between">
+      <p class="text-text/50">2023</p>
+      <div>
+        <Clock client:load />
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,44 @@
+---
+import DefaultLayout from '../layouts/DefaultLayout.astro'
+
+import { PortfolioList } from '../store/portfolio'
+---
+
+<html lang="en">
+  <DefaultLayout title="Home">
+    <main class="prose prose-invert mx-auto">
+      <article>
+        <h1>Hello World <i class="ph-duotone ph-hand-waving"></i></h1>
+        <p>I'm Hafid, interested in web development and web design <i class="ph-duotone ph-browsers"></i>.</p>
+        <p>
+          I'm a junior front-end developer at the moment <i class="ph-duotone ph-code"></i>. Since I'm primarily focused on creating user interfaces, I'm always looking for ways to get better at
+          design.
+        </p>
+        <p>
+          Other than that, I'm currently learning React <i class="ph-duotone ph-file-tsx"></i>, TypeScript <i class="ph-duotone ph-file-ts"></i> and its ecosystem.
+        </p>
+      </article>
+
+      <br />
+
+      <section>
+        <p class="text-text/50">project</p>
+        <p class="text-text">Some projects I've completed as part of my learning journey that I'd like to show you.</p>
+        <div class="grid grid-cols-2 gap-6">
+          {
+            PortfolioList.map((portfolio) => (
+              <div>
+                <a href={portfolio.link} rel="noreferer" target="_blank" class="block no-underline group">
+                  <span class="underline underline-offset-4 decoration-white/20 group-hover:decoration-white block">{portfolio.title}</span>
+                  <span class="text-text/50">{portfolio.description}</span>
+                </a>
+              </div>
+            ))
+          }
+        </div>
+      </section>
+
+      <br />
+    </main>
+  </DefaultLayout>
+</html>
