@@ -1,17 +1,11 @@
 <script setup lang="ts">
 import {onMounted, onUnmounted, ref} from 'vue'
+
 const secondHand = ref()
 const minuteHand = ref()
 const hourHand = ref()
-const timeNow = ref<string>('12:00:00')
 
 let timeoutInterval: number;
-
-function zeroPadding(num: number, digit: number = 1):string {
-    const limit = Math.pow(10, digit)
-  
-    return limit > num ? `0${num}` : num.toString()
-}
 
 function updateClock() {
   const now = new Date();
@@ -19,10 +13,8 @@ function updateClock() {
   const minutes = now.getMinutes();
   const seconds = now.getSeconds();
 
-  timeNow.value = `${zeroPadding(hours)}:${zeroPadding(minutes)}:${zeroPadding(seconds)}`
-
-  const hourRotation = (360 / 12) * hours + (360 / 12) * (minutes / 60) - 90;
-  const minuteRotation = (360 / 60) * minutes + (360 / 60) * (seconds / 60) - 90;
+  const hourRotation = (360 / 12) * hours + (360 / 12) * (minutes / 60);
+  const minuteRotation = (360 / 60) * minutes + (360 / 60) * (seconds / 60);
   const secondRotation = (360 / 60) * seconds;
 
 
@@ -55,25 +47,19 @@ onUnmounted(() => {
         ref="hourHand"
         class="absolute inset-0 grid place-items-center"
       >
-        <span
-          class="hand hand--hour w-1/2 h-[1px] rounded"
-        />
+        <span class="hand hand--hour w-1/2 h-[1px] rounded"/>
       </div>
       <div
         ref="minuteHand"
         class="absolute inset-0 grid place-items-center"
       >
-        <span
-          class="hand hand--minute w-[80%] h-[1px] rounded"
-        />
+        <span class="hand hand--minute w-[80%] h-[1px] rounded"/>
       </div>
       <div
         ref="secondHand"
         class="absolute inset-0 grid place-items-center"
       >
-        <span
-          class="hand hand--seconds w-full h-[1px]"
-        />
+        <span class="hand hand--seconds w-full h-[1px]" />
       </div>
       <div class="absolute inset-0 grid place-items-center">
         <span class="bg-white rounded-full h-[2px] w-[2px]" />
@@ -92,6 +78,6 @@ onUnmounted(() => {
 }
 
 .hand {
-  transform: rotate(-90deg);
+  transform: rotateZ(-90deg);
 }
 </style>
