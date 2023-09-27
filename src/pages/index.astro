@@ -1,59 +1,66 @@
 ---
-import { getCollection } from 'astro:content'
 import DefaultLayout from '../layouts/DefaultLayout.astro'
-
 import { PortfolioList } from '../store/portfolio'
-
-// const allBlogPosts = await getCollection('blog')
 ---
 
-<html lang="en">
-  <DefaultLayout title="Home">
-    <main class="prose prose-invert mx-auto">
-      <article>
-        <h1>Hello World</h1>
-        <p>
-          My name is Hafid, and I'm interested in web development and design <i class="ph-duotone ph-browsers"></i>.
-        </p>
-        <p>
-          I'm a junior front-end developer at the moment <i class="ph-duotone ph-code"></i>. Since I'm primarily focused on creating user interfaces, I'm always looking for ways to get better at
-          design.
-        </p>
-        <p>
-          Other than that, I'm currently learning React <i class="ph-duotone ph-file-tsx"></i>, TypeScript <i class="ph-duotone ph-file-ts"></i> and its ecosystem.
-        </p>
-      </article>
+<DefaultLayout title="Home">
+  <main class="prose prose-invert mx-auto slide-enter-content">
+    <article>
+      <div>
+        <h1 class="flex mb-0">Hello</h1>
+      </div>
+      <p>
+        My name is Hafid, and I'm interested in web development and design <i class="ph-duotone ph-browsers"></i>.
+      </p>
+      <p>
+        I'm a junior front-end developer at the moment <i class="ph-duotone ph-code"></i>. Since I'm primarily focused on creating user interfaces, I'm always looking for ways to get better at design.
+      </p>
+      <p>
+        Other than that, I'm currently learning React <i class="ph-duotone ph-file-tsx"></i>, TypeScript <i class="ph-duotone ph-file-ts"></i> and its ecosystem.
+      </p>
+    </article>
 
-      <br />
+    <br />
 
-      <article>
-        <p class="text-text/50">project</p>
-        <p class="text-text">Some projects I've completed as part of my learning journey that I'd like to show you.</p>
-        <div class="grid sm:grid-cols-2 gap-6">
-          {
-            PortfolioList.map((portfolio) => (
-              <div>
-                <a href={portfolio.link} rel="noreferer" target="_blank" class="block no-underline group">
-                  <span class="flex items-center gap-1 ">
-                    <span class="underline underline-offset-4 decoration-white/20 group-hover:decoration-white block">{portfolio.title}</span>
-                    <i class="ph-duotone ph-arrow-up-right no-underline text-text/70" />
-                  </span>
-                  <span class="text-text/50">{portfolio.description}</span>
-                </a>
-              </div>
-            ))
-          }
-        </div>
-      </article>
+    <article>
+      <p class="text-text/50">project</p>
+      <p class="text-text">Some projects I've completed as part of my learning journey that I'd like to show you.</p>
+      <div class="grid sm:grid-cols-2 gap-6">
+        {
+          PortfolioList.map((portfolio) => (
+            <div>
+              <a href={portfolio.link} rel="noreferer" target="_blank" class="block no-underline group">
+                <span class="flex items-center gap-1 ">
+                  <span class="underline underline-offset-4 decoration-white/20 group-hover:decoration-white block">{portfolio.title}</span>
+                  <i class="ph-duotone ph-arrow-up-right no-underline text-text/70" />
+                </span>
+                <span class="text-text/50">{portfolio.description}</span>
+              </a>
+            </div>
+          ))
+        }
+      </div>
+    </article>
 
-      <br />
-      <br />
+    <br />
+    <br />
 
-      <!-- <article>
-        <p class="text-text/50">article</p>
-        <p>I write an article in Bahasa, it's not that good, but I am just trying to fill this site.</p>
-        {allBlogPosts.map((post) => <div>{post}</div>)}
-      </article> -->
-    </main>
-  </DefaultLayout>
-</html>
+    <article>
+      <p class="text-text/50">article</p>
+      <p>I also wrote a blog post in Bahasa Indonesia, but it wasn't a serious post, it was just my daily writing.</p>
+      <p class="text-text/30">comin soon...</p>
+    </article>
+
+    <br />
+    <br />
+
+    <span class="box w-4 h-4 inline-block mr-2 bg-accent"></span>
+    <span class="box w-4 h-4 inline-block mr-2 bg-primary"></span>
+    <span class="box w-4 h-4 inline-block mr-2 bg-orange-400"></span>
+    <span class="box w-4 h-4 inline-block mr-2 bg-accent"></span>
+    <span class="box w-4 h-4 inline-block mr-2 bg-greene"></span>
+    <span class="box w-4 h-4 inline-block mr-2 bg-orange-400"></span>
+    <span class="box w-4 h-4 inline-block mr-2 bg-accent"></span>
+    <span class="box w-4 h-4 inline-block mr-2 bg-greene"></span>
+  </main>
+</DefaultLayout>
