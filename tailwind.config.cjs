@@ -9,6 +9,7 @@ module.exports = {
 				'primary': '#565253',
 				'secondary': '#1f1f1e',
 				'accent': '#878283',
+				'greene': '#b0ee83'
 			},
 			typography: {
 				DEFAULT: {

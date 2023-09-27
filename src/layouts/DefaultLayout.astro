@@ -2,6 +2,7 @@
 import Clock from '../components/Clock.vue'
 const { title } = Astro.props
 import Navbar from '../components/Navbar.astro'
+import '../assets/index.css'
 ---
 
 <html lang="en">
@@ -9,8 +10,7 @@ import Navbar from '../components/Navbar.astro'
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>kholishafid | {title}</title>
-    <link rel="stylesheet" type="text/css" href="https://unpkg.com/@phosphor-icons/web@2.0.3/src/duotone/style.css" />
-    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-element-bundle.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.0.3/src/duotone/style.css" />
   </head>
   <body class="bg-background max-md:px-4 max-lg:px-6">
     <Navbar />
