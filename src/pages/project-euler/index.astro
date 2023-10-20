@@ -1,0 +1,34 @@
+---
+import { getCollection } from 'astro:content'
+const blogEntries = await getCollection('project-euler')
+
+import DefaultLayout from '../../layouts/DefaultLayout.astro'
+---
+
+<DefaultLayout title="project-euler">
+  <main class="prose prose-invert mx-auto slide-enter-content flex-1">
+    <section class="fixed -ml-24">
+      <a href="/" class="text-text/50 underline-offset-4 hover:text-text text-sm font-normal">
+        <i class="ph-duotone ph-arrow-left"></i>
+         back
+      </a>
+    </section>
+
+    <p>Ada sebuah coding challenge dari freeCodeCamp dengan nama Project Euler, tapi apatuh project euler.</p>
+    <p class="text-text italic">
+      "Project Euler is a series of challenging mathematical/computer programming problems that will require more than just mathematical insights to solve. Although mathematics will help you arrive at
+      elegant and efficient methods, the use of a computer and programming skills will be required to solve most problems."
+      <small> - <a href="https://projecteuler.net/" class="not-italic">projecteuler.net</a></small>
+    </p>
+    <p>kali ini levi akan mencoba menyelesaikan challenge tersebut.</p>
+    <div>
+      {
+        blogEntries.map((blogPostEntry) => (
+          <a href={`/project-euler/${blogPostEntry.slug}`} class="no-underline font-normal px-4 py-3 hover:bg-white/10 block rounded-lg">
+            # <span>{blogPostEntry.data.title}</span>
+          </a>
+        ))
+      }
+    </div>
+  </main>
+</DefaultLayout>
