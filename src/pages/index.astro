@@ -10,7 +10,7 @@ import { PortfolioList } from '../store/portfolio'
         <h1 class="flex mb-0">Hello</h1>
       </div>
       <p>
-        My name is Hafid, and I'm interested in web development and design <i class="ph-duotone ph-browsers"></i>.
+        My name is Hafid a.k.a <span class="text-text/50">levi</span>, and I'm interested in web development and web design <i class="ph-duotone ph-browsers"></i>.
       </p>
       <p>
         I'm a junior front-end developer at the moment <i class="ph-duotone ph-code"></i>. Since I'm primarily focused on creating user interfaces, I'm always looking for ways to get better at design.
@@ -48,7 +48,12 @@ import { PortfolioList } from '../store/portfolio'
     <article>
       <p class="text-text/50">article</p>
       <p>I also wrote a blog post in Bahasa Indonesia, but it wasn't a serious post, it was just my daily writing.</p>
-      <p class="text-text/30">comin soon...</p>
+      <a href={'/project-euler'} class="block no-underline group">
+        <span class="flex items-center gap-1">
+          <span class="underline underline-offset-4 decoration-white/20 group-hover:decoration-white block"> Project Euler</span>
+        </span>
+        <!-- <span class="text-text/50">{'portfolio.description'}</span> -->
+      </a>
     </article>
 
     <br />
