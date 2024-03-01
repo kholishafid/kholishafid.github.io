@@ -1,6 +1,6 @@
 ---
-import DefaultLayout from '../layouts/DefaultLayout.astro'
-import { PortfolioList } from '../store/portfolio'
+import DefaultLayout from "../layouts/DefaultLayout.astro";
+import { PortfolioList } from "../store/portfolio";
 ---
 
 <DefaultLayout title="Home">
@@ -10,11 +10,16 @@ import { PortfolioList } from '../store/portfolio'
         <h1 class="flex mb-0">Hafid Nur Kholis</h1>
       </div>
       <p>
-        Hello i'm Hafid, a junior front-end developer <i class="ph-duotone ph-code"></i>.
+        Hello i'm Hafid, a junior front-end developer <i
+          class="ph-duotone ph-code"></i>.
       </p>
-      <p>Since I'm primarily focused on creating user interfaces, I'm always looking for ways to get better at design.</p>
       <p>
-        Currently learning React <i class="ph-duotone ph-file-tsx"></i>, TypeScript <i class="ph-duotone ph-file-ts"></i> and its ecosystem.
+        Since I'm primarily focused on creating user interfaces, I'm always
+        looking for ways to get better at design.
+      </p>
+      <p>
+        Currently learning React <i class="ph-duotone ph-file-tsx"></i>,
+        TypeScript <i class="ph-duotone ph-file-ts"></i> and its ecosystem.
       </p>
     </article>
 
@@ -22,14 +27,24 @@ import { PortfolioList } from '../store/portfolio'
 
     <article>
       <p class="text-text/50">project</p>
-      <p class="text-text">Some projects I've completed as part of my learning journey that I'd like to show you.</p>
+      <p class="text-text">
+        Some projects I've completed as part of my learning journey that I'd
+        like to show you.
+      </p>
       <div class="grid sm:grid-cols-2 gap-6">
         {
           PortfolioList.map((portfolio) => (
             <div>
-              <a href={portfolio.link} rel="noreferer" target="_blank" class="block no-underline group">
+              <a
+                href={portfolio.link}
+                rel="noreferer"
+                target="_blank"
+                class="block no-underline group"
+              >
                 <span class="flex items-center gap-1 ">
-                  <span class="underline underline-offset-4 decoration-white/20 group-hover:decoration-white block">{portfolio.title}</span>
+                  <span class="underline underline-offset-4 decoration-white/20 group-hover:decoration-white block">
+                    {portfolio.title}
+                  </span>
                   <i class="ph-duotone ph-arrow-up-right no-underline text-text/70" />
                 </span>
                 <span class="text-text/50">{portfolio.description}</span>
@@ -42,17 +57,6 @@ import { PortfolioList } from '../store/portfolio'
 
     <br />
     <br />
-
-    <article>
-      <p class="text-text/50">article</p>
-      <p>I also wrote a blog post in Bahasa Indonesia, but it wasn't a serious post, it was just my daily writing.</p>
-      <a href={'/project-euler'} class="block no-underline group">
-        <span class="flex items-center gap-1">
-          <span class="underline underline-offset-4 decoration-white/20 group-hover:decoration-white block"> Project Euler</span>
-        </span>
-        <!-- <span class="text-text/50">{'portfolio.description'}</span> -->
-      </a>
-    </article>
 
     <br />
     <br />

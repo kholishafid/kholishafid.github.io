@@ -1,15 +1,14 @@
 interface Portoflio {
-  title: string
-  description: string
-  link: string
+  title: string;
+  description: string;
+  link: string;
 }
-
 
 export const PortfolioList: Portoflio[] = [
   {
     title: "HN Client",
-    description: 'Hacker news simple client',
-    link: 'https://hackerns.vercel.app/',
+    description: "Hacker news simple client",
+    link: "https://hackerns.vercel.app/",
   },
   {
     title: "MealPad",
@@ -21,9 +20,4 @@ export const PortfolioList: Portoflio[] = [
     description: "Pokedex app.",
     link: "https://pokemon-index-rho.vercel.app/",
   },
-  {
-    title: "Noted",
-    description: 'A simple note taking app.',
-    link: 'https://note-take.vercel.app/',
-  },
-]
+];
