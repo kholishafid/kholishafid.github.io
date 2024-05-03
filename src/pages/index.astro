@@ -7,7 +7,7 @@ import { PortfolioList } from "../store/portfolio";
   <main class="prose prose-invert mx-auto slide-enter-content">
     <article>
       <div>
-        <h1 class="flex mb-0">Hafid Nur Kholis</h1>
+        <h5 class="flex mb-0 font-semibold text-white">Hafid Nur Kholis</h5>
       </div>
       <p>
         Hello i'm Hafid, a junior front-end developer <i
@@ -26,7 +26,10 @@ import { PortfolioList } from "../store/portfolio";
     <br />
 
     <article>
-      <p class="text-text/50">project</p>
+      <p class="text-text/50 inline-flex items-center gap-1">
+        <i class="ph-duotone ph-puzzle-piece no-underline text-text/50"></i>
+        Project
+      </p>
       <p class="text-text">
         Some projects I've completed as part of my learning journey that I'd
         like to show you.
@@ -39,7 +42,7 @@ import { PortfolioList } from "../store/portfolio";
                 href={portfolio.link}
                 rel="noreferer"
                 target="_blank"
-                class="block no-underline group"
+                class="block no-underline group text-base"
               >
                 <span class="flex items-center gap-1 ">
                   <span class="underline underline-offset-4 decoration-white/20 group-hover:decoration-white block">
@@ -47,7 +50,9 @@ import { PortfolioList } from "../store/portfolio";
                   </span>
                   <i class="ph-duotone ph-arrow-up-right no-underline text-text/70" />
                 </span>
-                <span class="text-text/50">{portfolio.description}</span>
+                <span class="text-text/50 font-normal">
+                  {portfolio.description}
+                </span>
               </a>
             </div>
           ))
