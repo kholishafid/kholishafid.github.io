@@ -6,6 +6,17 @@
   --accent: #878283;
 }
 
+body {
+  --dot-bg: var(--background);
+  --dot-color: hsl(0, 0%, 40%);
+  --dot-size: 1px;
+  --dot-space: 36px;
+	background:
+		linear-gradient(90deg, var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center / var(--dot-space) var(--dot-space),
+		linear-gradient(var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center / var(--dot-space) var(--dot-space),
+		var(--dot-color);
+}
+
 @keyframes slide-enter {
   0% {
     transform: translateY(10px);
