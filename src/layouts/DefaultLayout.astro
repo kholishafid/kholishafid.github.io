@@ -1,12 +1,23 @@
 ---
 import Clock from "../components/Clock.vue";
-const { title } = Astro.props;
 import Navbar from "../components/Navbar.astro";
+import GuestBook from "../components/GuestBook.vue";
 import "../assets/index.css";
+
+const { title } = Astro.props;
 ---
 
-<html lang="en">
+<html lang="en" class="dark">
   <head>
+    <script>
+      const theme = localStorage.getItem("kholishafid-site-theme");
+      if (!theme) {
+        document.documentElement.setAttribute("class", "dark");
+      }
+      theme === "light"
+        ? document.documentElement.setAttribute("class", "light")
+        : document.documentElement.setAttribute("class", "dark");
+    </script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>kholishafid | {title}</title>
@@ -16,19 +27,25 @@ import "../assets/index.css";
       rel="stylesheet"
       href="https://unpkg.com/@phosphor-icons/web@2.0.3/src/duotone/style.css"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body
     class="max-md:px-4 max-lg:px-6 flex flex-col min-h-screen overflow-y-scroll"
   >
     <Navbar />
-    <div class="my-16 flex-1">
+    <div class="my-16 flex-1 w-full max-w-xl mx-auto">
       <slot />
     </div>
-    <footer class="">
+    <footer class="max-w-xl w-full mx-auto">
       <section
-        class="py-6 container max-w-prose mx-auto relative flex justify-between"
+        class="py-6 container max-w-xl mx-auto relative flex justify-between"
       >
-        <p class="text-text/50">{new Date().getFullYear()}</p>
+        <p class="text-slate-800 dark:text-text">{new Date().getFullYear()}</p>
         <div>
           <Clock client:load />
         </div>

@@ -5,52 +5,65 @@ import { PortfolioList } from "../store/portfolio";
 
 <DefaultLayout title="Home">
   <main class="prose prose-invert mx-auto slide-enter-content">
-    <article>
+    <article class="mb-8">
       <div>
-        <h5 class="flex mb-0 font-semibold text-white">Hafid Nur Kholis</h5>
+        <h5 class="flex mb-4 font-semibold text-slate-950 dark:text-white">
+          Hafid Nur Kholis
+        </h5>
       </div>
-      <p>
+      <p class="text-slate-800 dark:text-text mb-2">
         Hello i'm Hafid, a junior front-end developer <i
           class="ph-duotone ph-code"></i>.
       </p>
-      <p>
-        Since I'm primarily focused on creating user interfaces, I'm always
-        looking for ways to get better at design.
+      <p class="text-slate-800 dark:text-text mb-2">
+        I do a litle bit design with figma, also crafting interface with
+        vue/react.
       </p>
-      <p>
-        Currently learning React <i class="ph-duotone ph-file-tsx"></i>,
-        TypeScript <i class="ph-duotone ph-file-ts"></i> and its ecosystem.
+      <p class="text-slate-800 dark:text-text mb-2"></p>
+      <p class="text-slate-800 dark:text-text">
+        Currently learning
+        <span
+          class="text-white bg-slate-700 dark:bg-slate-200 px-1.5 rounded dark:text-black text-sm"
+          >Typescript</span
+        >
+        and
+        <span
+          class="text-white bg-slate-700 dark:bg-slate-200 px-1.5 rounded dark:text-black text-sm"
+          >Nextjs</span
+        >
       </p>
     </article>
 
-    <br />
-
-    <article>
-      <p class="text-text/50 inline-flex items-center gap-1">
-        <i class="ph-duotone ph-puzzle-piece no-underline text-text/50"></i>
+    <article class="my-8">
+      <p
+        class="text-slate-950 dark:text-white inline-flex items-center gap-1 mb-2 font-semibold"
+      >
+        <i
+          class="ph-duotone ph-puzzle-piece no-underline text-slate-950 dark:text-white"
+        ></i>
         Project
       </p>
-      <p class="text-text">
+      <p class="text-slate-800 dark:text-text mb-4">
         Some projects I've completed as part of my learning journey that I'd
         like to show you.
       </p>
       <div class="grid sm:grid-cols-2 gap-6">
         {
           PortfolioList.map((portfolio) => (
-            <div>
+            <div class="bg-slate-800/10 dark:bg-white/5 p-3 border border-slate-400 dark:border-gray-200/10 rounded-lg">
               <a
                 href={portfolio.link}
                 rel="noreferer"
                 target="_blank"
                 class="block no-underline group text-base"
               >
-                <span class="flex items-center gap-1 ">
-                  <span class="underline underline-offset-4 decoration-white/20 group-hover:decoration-white block">
+                <span class="flex items-center gap-1">
+                  <span class="underline underline-offset-4 decoration-gray-400 dark:decoration-white/20 group-hover:decoration-slate-700 dark:group-hover:decoration-white block text-slate-950 dark:text-white mb-1">
                     {portfolio.title}
                   </span>
-                  <i class="ph-duotone ph-arrow-up-right no-underline text-text/70" />
+                  <i class="ph-duotone ph-arrow-up-right no-underline text-slate-800 dark:text-text mb-1" />
                 </span>
-                <span class="text-text/50 font-normal">
+                <span class="text-slate-800 dark:text-text font-normaltext-sm">
                   {portfolio.description}
                 </span>
               </a>
@@ -59,12 +72,6 @@ import { PortfolioList } from "../store/portfolio";
         }
       </div>
     </article>
-
-    <br />
-    <br />
-
-    <br />
-    <br />
 
     <span class="box w-4 h-4 inline-block mr-2 bg-accent"></span>
     <span class="box w-4 h-4 inline-block mr-2 bg-primary"></span>
