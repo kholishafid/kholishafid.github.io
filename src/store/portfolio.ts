@@ -7,12 +7,12 @@ interface Portoflio {
 export const PortfolioList: Portoflio[] = [
   {
     title: "HN Client",
-    description: "Hacker news simple client",
+    description: "Hacker news client",
     link: "https://hackerns.vercel.app/",
   },
   {
     title: "MealPad",
-    description: "Kumpulan resep makanan dari seluruh dunia.",
+    description: "Recipe collection.",
     link: "https://mealpad.netlify.app/",
   },
   {
