@@ -5,7 +5,7 @@
   --secondary: #1f1f1e;
   --accent: #878283;
   --dot-bg: var(--background);
-  --dot-color: hsl(0, 0%, 45%);
+  --dot-color: hsl(0, 0%, 25%);
   --dot-size: 1px;
   --dot-space: 24px;
 }
