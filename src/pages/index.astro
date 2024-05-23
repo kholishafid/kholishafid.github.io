@@ -50,7 +50,7 @@ import { PortfolioList } from "../store/portfolio";
       <div class="grid sm:grid-cols-2 gap-6">
         {
           PortfolioList.map((portfolio) => (
-            <div class="bg-slate-800/10 dark:bg-white/5 p-3 border border-slate-400 dark:border-gray-200/10 rounded-lg">
+            <div class="bg-slate-100 dark:bg-white/5 p-3 border border-slate-300 dark:border-gray-200/10 rounded-lg">
               <a
                 href={portfolio.link}
                 rel="noreferer"
@@ -72,14 +72,5 @@ import { PortfolioList } from "../store/portfolio";
         }
       </div>
     </article>
-
-    <span class="box w-4 h-4 inline-block mr-2 bg-accent"></span>
-    <span class="box w-4 h-4 inline-block mr-2 bg-primary"></span>
-    <span class="box w-4 h-4 inline-block mr-2 bg-orange-400"></span>
-    <span class="box w-4 h-4 inline-block mr-2 bg-accent"></span>
-    <span class="box w-4 h-4 inline-block mr-2 bg-greene"></span>
-    <span class="box w-4 h-4 inline-block mr-2 bg-orange-400"></span>
-    <span class="box w-4 h-4 inline-block mr-2 bg-accent"></span>
-    <span class="box w-4 h-4 inline-block mr-2 bg-greene"></span>
   </main>
 </DefaultLayout>
