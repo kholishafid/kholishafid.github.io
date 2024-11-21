@@ -33,16 +33,16 @@ onMounted(() => {
 
 <template>
   <button
-    class="hover:bg-slate-800/5 dark:hover:bg-black h-10 w-10 grid place-items-center rounded-full relative overflow-hidden"
+    class="hover:bg-neutral-800/5 dark:hover:bg-black h-10 w-10 grid place-items-center rounded-full relative overflow-hidden"
     :class="{ darkTheme }"
     @click="() => setDarkTheme(!darkTheme)"
     id="theme-toggle"
   >
     <i
-      class="ph-duotone ph-moon text-2xl inline-block text-slate-800 dark:text-text absolute theme-icon"
+      class="ph-duotone ph-moon text-2xl inline-block text-neutral-800 dark:text-text absolute theme-icon"
     ></i>
     <i
-      class="ph-duotone ph-sun text-2xl inline-block text-slate-800 dark:text-text absolute theme-icon"
+      class="ph-duotone ph-sun text-2xl inline-block text-neutral-800 dark:text-text absolute theme-icon"
     ></i>
   </button>
 </template>

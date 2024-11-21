@@ -25,6 +25,8 @@ const { title } = Astro.props;
       name="google-site-verification"
       content="LhxsukG4e_6uFjCaBSgbncMYTZJc67okmEdw5SP5EWo"
     />
+    <meta name="robots" content="index, follow" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="sitemap" href="/sitemap-index.xml" />
     <script
       defer
@@ -37,7 +39,7 @@ const { title } = Astro.props;
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
       rel="stylesheet"
     />
   </head>
@@ -52,7 +54,9 @@ const { title } = Astro.props;
       <section
         class="py-6 container max-w-xl mx-auto relative flex justify-between"
       >
-        <p class="text-slate-800 dark:text-text">{new Date().getFullYear()}</p>
+        <p class="text-neutral-800 dark:text-text italic text-sm">
+          Mulat Sarira Hangrasa Wani
+        </p>
         <div>
           <Clock client:load />
         </div>

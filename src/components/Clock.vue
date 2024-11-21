@@ -42,23 +42,23 @@ onUnmounted(() => {
 <template>
   <section class="flex items-center gap-2">
     <div
-      class="w-5 h-5 aspect-square rounded-full border-[1.5px] border-slate-800 dark:border-text relative bg-white/[0.08]"
+      class="w-5 h-5 aspect-square rounded-full border-[1.5px] border-neutral-800 dark:border-text relative bg-white/[0.08]"
     >
       <div ref="hourHand" class="absolute inset-0 grid place-items-center">
         <span class="hand hand--hour w-1/2 h-[1px] rounded" />
       </div>
       <div ref="minuteHand" class="absolute inset-0 grid place-items-center">
         <span
-          class="hand hand--minute w-[80%] h-[1px] rounded bg-slate-800 dark:bg-white"
+          class="hand hand--minute w-[80%] h-[1px] rounded bg-neutral-800 dark:bg-white"
         />
       </div>
       <div ref="secondHand" class="absolute inset-0 grid place-items-center">
         <span
-          class="hand hand--seconds w-full h-[1px] bg-slate-800 dark:bg-white"
+          class="hand hand--seconds w-full h-[1px] bg-neutral-800 dark:bg-white"
         />
       </div>
       <div class="absolute inset-0 grid place-items-center">
-        <span class="bg-slate-800 dark:bg-white rounded-full h-[2px] w-[2px]" />
+        <span class="bg-neutral-800 dark:bg-white rounded-full h-[2px] w-[2px]" />
       </div>
     </div>
   </section>

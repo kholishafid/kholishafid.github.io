@@ -6,6 +6,11 @@ interface Portoflio {
 
 export const PortfolioList: Portoflio[] = [
   {
+    title: "Jadwal Sepur Komuter",
+    description: "Indonesia's commuter line schedule.",
+    link: "https://jadwal-sepur-komuter.vercel.app/",
+  },
+  {
     title: "HN Client",
     description: "Hacker news client",
     link: "https://hackerns.vercel.app/",

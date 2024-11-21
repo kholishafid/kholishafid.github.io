@@ -11,7 +11,7 @@
 }
 
 html.light {
-  --background: #f1f5f9;
+  --background: #f9fafb;
   --text: #1e293b;
   --dot-color: hsl(0, 0%, 50%);
 }
@@ -21,7 +21,7 @@ body {
 		linear-gradient(90deg, var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center / var(--dot-space) var(--dot-space),
 		linear-gradient(var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center / var(--dot-space) var(--dot-space),
 		var(--dot-color);
-  font-family: "Hanken Grotesk", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: "Inter", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;

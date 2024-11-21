@@ -3,54 +3,43 @@ import DefaultLayout from "../layouts/DefaultLayout.astro";
 import { PortfolioList } from "../store/portfolio";
 ---
 
-<DefaultLayout title="Home">
+<DefaultLayout title="home">
   <main class="prose prose-invert mx-auto slide-enter-content">
     <article class="mb-8">
       <div>
-        <h5 class="flex mb-4 font-semibold text-slate-950 dark:text-white">
+        <h5 class="flex mb-4 font-semibold text-gray-950 dark:text-white">
           Hafid Nur Kholis
         </h5>
       </div>
-      <p class="text-slate-800 dark:text-text mb-2">
-        Hello i'm Hafid, a junior front-end developer <i
-          class="ph-duotone ph-code"></i>.
+      <p class="text-gray-800 dark:text-text mb-2">
+        Hello, I'm Hafid, a junior front-end developer with experience in UI
+        design using Figma and crafting user interfaces with Vue and React.
       </p>
-      <p class="text-slate-800 dark:text-text mb-2">
-        I do a litle bit design with figma, also crafting interface with
-        vue/react.
-      </p>
-      <p class="text-slate-800 dark:text-text mb-2"></p>
-      <p class="text-slate-800 dark:text-text">
-        Currently learning
-        <span
-          class="text-white bg-slate-700 dark:bg-slate-200 px-1.5 rounded dark:text-black text-sm"
-          >Typescript</span
-        >
-        and
-        <span
-          class="text-white bg-slate-700 dark:bg-slate-200 px-1.5 rounded dark:text-black text-sm"
-          >Nextjs</span
-        >
+      <p class="text-gray-800 dark:text-text mb-2"></p>
+      <p class="text-gray-800 dark:text-text">
+        As a long-life learner, I continuously adapt to the latest technologies.
+        Currently, I am learning meta framework like Nextjs and some backend
+        stuff with Typescript.
       </p>
     </article>
 
     <article class="my-8">
       <p
-        class="text-slate-950 dark:text-white inline-flex items-center gap-1 mb-2 font-semibold"
+        class="text-gray-950 dark:text-white inline-flex items-center gap-1 mb-2 font-semibold"
       >
         <i
-          class="ph-duotone ph-puzzle-piece no-underline text-slate-950 dark:text-white"
+          class="ph-duotone ph-puzzle-piece no-underline text-gray-950 dark:text-white"
         ></i>
         Project
       </p>
-      <p class="text-slate-800 dark:text-text mb-4">
+      <p class="text-gray-800 dark:text-text mb-4">
         Some projects I've completed as part of my learning journey that I'd
         like to show you.
       </p>
       <div class="grid sm:grid-cols-2 gap-6">
         {
           PortfolioList.map((portfolio) => (
-            <div class="bg-slate-100 dark:bg-white/5 p-3 border border-slate-300 dark:border-gray-200/10 rounded-lg">
+            <div class="bg-gray-50/10 dark:bg-white/5 p-3 border border-gray-300 dark:border-gray-200/10 rounded-lg">
               <a
                 href={portfolio.link}
                 rel="noreferer"
@@ -58,12 +47,12 @@ import { PortfolioList } from "../store/portfolio";
                 class="block no-underline group text-base"
               >
                 <span class="flex items-center gap-1">
-                  <span class="underline underline-offset-4 decoration-gray-400 dark:decoration-white/20 group-hover:decoration-slate-700 dark:group-hover:decoration-white block text-slate-950 dark:text-white mb-1">
+                  <span class="underline underline-offset-4 decoration-gray-400 dark:decoration-white/20 group-hover:decoration-gray-700 dark:group-hover:decoration-white block text-gray-950 dark:text-white mb-1">
                     {portfolio.title}
                   </span>
-                  <i class="ph-duotone ph-arrow-up-right no-underline text-slate-800 dark:text-text mb-1" />
+                  <i class="ph-duotone ph-arrow-up-right no-underline text-gray-800 dark:text-text mb-1" />
                 </span>
-                <span class="text-slate-800 dark:text-text font-normaltext-sm">
+                <span class="text-gray-800 dark:text-text font-normaltext-sm">
                   {portfolio.description}
                 </span>
               </a>
