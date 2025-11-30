@@ -1,6 +1,8 @@
+@import "tailwindcss";
+
 :root {
   --text: #ffffff;
-  --background: #171717;
+  --background: #0A0C0F;
   --primary: #565253;
   --secondary: #1f1f1e;
   --accent: #878283;
@@ -17,10 +19,8 @@ html.light {
 }
 
 body {
-	background:
-		linear-gradient(90deg, var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center / var(--dot-space) var(--dot-space),
-		linear-gradient(var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center / var(--dot-space) var(--dot-space),
-		var(--dot-color);
+  background:
+    var(--background);
   font-family: "Inter", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-optical-sizing: auto;
   font-weight: 400;
@@ -130,4 +130,57 @@ body {
   .slide-enter-content>*:nth-child(20) {
     --enter-stage: 20;
   }
+}
+
+
+.border-bottom-dashed {
+  animation: borderBottomDashed 1s linear forwards;
+}
+
+@keyframes borderBottomDashed {
+  0% {
+    border-bottom: 0px dashed color-mix(in srgb, var(--primary), transparent 100%);
+  }
+
+  100% {
+    border-bottom: 1px dashed color-mix(in srgb, var(--primary), transparent 0%);
+  }
+}
+
+
+.border-x-dashed {
+  animation: borderXDashed 1s linear forwards;
+}
+
+@keyframes borderXDashed {
+  0% {
+    border-left: 0px dashed color-mix(in srgb, var(--primary), transparent 100%);
+    border-right: 0px dashed color-mix(in srgb, var(--primary), transparent 100%);
+  }
+
+  100% {
+    border-left: 1px dashed color-mix(in srgb, var(--primary), transparent 0%);
+    border-right: 1px dashed color-mix(in srgb, var(--primary), transparent 0%);
+  }
+}
+
+
+.border-top-dashed {
+  animation: borderTopDashed 1s linear forwards;
+}
+
+@keyframes borderTopDashed {
+  0% {
+    border-top: 0px dashed color-mix(in srgb, var(--primary), transparent 100%);
+  }
+
+  100% {
+    border-top: 1px dashed color-mix(in srgb, var(--primary), transparent 0%);
+  }
+}
+
+
+border-top-x-dashed {
+  animation: borderTopDashed 1s linear forwards, borderXDashed 1s linear forwards;
+  -webkit-animation: borderTopDashed 1s linear forwards, borderXDashed 1s linear forwards;
 }
