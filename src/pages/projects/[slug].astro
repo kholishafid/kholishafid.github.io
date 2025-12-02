@@ -1,0 +1,39 @@
+---
+import { getCollection } from "astro:content";
+import { getEntry } from "astro:content";
+import BlogPostLayout from "../../layouts/blog-post-layout.astro";
+
+const { slug } = Astro.params;
+if (!slug) throw new Error("Slug not found");
+
+const project = await getEntry("projects", slug);
+if (!project) throw new Error(`Project not found for slug: ${slug}`);
+const { Content, remarkPluginFrontmatter } = await project.render();
+
+export async function getStaticPaths() {
+  const projects = await getCollection("projects");
+  return projects.map((post) => ({ params: { slug: post.slug } }));
+}
+---
+
+<BlogPostLayout title={project.data.title}>
+  <article class="max-w-sm md:max-w-2xl w-full mx-auto">
+    <div class="grid gap-3 mb-4 relative">
+      <h1 class="text-3xl font-semibold mb-2 order-2">{project.data.title}</h1>
+      <div
+        class="lg:absolute order-1 right-full w-[150px] flex flex-col lg:items-end gap-2 top-0 mr-8 mb-4"
+      >
+        <div class="size-8 bg-orange-600 rounded"></div>
+        <div class="flex flex-col gap-2 lg:items-end">
+          <span class="text-sm text-muted-foreground"
+            >{remarkPluginFrontmatter.minutesRead}</span
+          >
+        </div>
+        <a href="/" class="flex items-center gap-1"> <i class="ph-duotone ph-arrow-left"></i> Back</a>
+      </div>
+    </div>
+    <div class="prose max-w-sm md:max-w-2xl">
+      <Content />
+    </div>
+  </article>
+</BlogPostLayout>

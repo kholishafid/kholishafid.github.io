@@ -1,0 +1,34 @@
+---
+import { getCollection } from "astro:content";
+
+const articles = await getCollection("articles");
+---
+
+<div class="col-span-2">
+  <div class="grid gap-3">
+    <p class="text-muted-foreground flex items-center gap-2">
+      <i class="ph-duotone ph-info"></i>
+      More content soon...
+    </p>
+    {
+      articles.map((articles) => (
+        <div>
+          <a
+            href={`${articles.collection}/${articles.slug}`}
+            rel="noreferer"
+            class="no-underline group text-base flex gap-1 items-center"
+          >
+            <span class="sm:flex items-center gap-1">
+              <h6 class="mb-1 line-clamp-1">{articles.data.title}</h6>
+              <p class="text-muted-foreground hidden sm:block">
+                {articles.data.short_description}
+              </p>
+            </span>
+            <div class="grow h-1 border-b mt-1 border-dark-7 min-w-12" />
+            <span class="font-normaltext-sm text-nowrap">20 May</span>
+          </a>
+        </div>
+      ))
+    }
+  </div>
+</div>

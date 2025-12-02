@@ -1,0 +1,193 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root {
+  --background: hsl(210, 16%, 6%);
+  --primary: #565253;
+  --secondary: #1f1f1e;
+  --accent: #878283;
+  --dot-bg: var(--background);
+  --dot-color: hsl(0, 0%, 25%);
+  --dot-size: 1px;
+  --dot-space: 24px;
+  --line-color: rgba(255, 255, 255, 0.5);
+
+  --light-1: hsl(218, 8%, 96%);
+  --light-2: hsl(218, 8%, 92%);
+  --light-3: hsl(218, 8%, 76%);
+  --light-4: hsl(218, 8%, 68%);
+  --light-5: hsl(218, 8%, 60%);
+  --light-6: hsl(218, 8%, 52%);
+
+  --dark-1: hsl(218, 8%, 64%);
+  --dark-2: hsl(218, 8%, 56%);
+  --dark-3: hsl(218, 8%, 48%);
+  --dark-4: hsl(218, 8%, 40%);
+  --dark-5: hsl(218, 8%, 32%);
+  --dark-6: hsl(218, 8%, 24%);
+  --dark-7: hsl(218, 8%, 16%);
+  --dark-8: hsl(218, 8%, 10%);
+  --dark-9: hsl(218, 8%, 8%);
+
+  /* Typography */
+  --heading-color: #ECEDEF;
+
+  --display-lg-size: 109.66px;
+  --display-lg-weight: 800;
+  --display-lg-line-height: 1.5;
+  --display-lg-letter-spacing: 0.005em;
+
+  --display-md-size: 86.21px;
+  --display-md-weight: 800;
+  --display-md-line-height: 1.5;
+  --display-md-letter-spacing: 0.008em;
+
+  --h1-size: 67.77px;
+  --h1-weight: 700;
+  --h1-line-height: 1.5;
+  --h1-letter-spacing: 0.008em;
+
+  --h2-size: 41.89px;
+  --h2-weight: 600;
+  --h2-line-height: 1.55;
+  --h2-letter-spacing: 0.015em;
+
+  --h3-size: 32.93px;
+  --h3-weight: 600;
+  --h3-line-height: 1.55;
+  --h3-letter-spacing: 0.02em;
+
+  --h4-size: 25.89px;
+  --h4-weight: 500;
+  --h4-line-height: 1.55;
+  --h4-letter-spacing: 0.02em;
+
+  --h5-size: 22.95px;
+  --h5-weight: 500;
+  --h5-line-height: 1.6;
+  --h5-letter-spacing: 0.025em;
+
+  --h6-size: 20.35px;
+  --h6-weight: 500;
+  --h6-line-height: 1.6;
+  --h6-letter-spacing: 0.025em;
+
+  --body-xl-size: 18.05px;
+  --body-xl-weight: 400;
+  --body-xl-line-height: 1.6;
+  --body-xl-letter-spacing: 0.03em;
+
+  --body-size: 16px;
+  --body-weight: 400;
+  --body-line-height: 1.6;
+  --body-letter-spacing: 0.03em;
+
+  --body-sm-size: 14.19px;
+  --body-sm-weight: 400;
+  --body-sm-line-height: 1.65;
+  --body-sm-letter-spacing: 0.03em;
+
+  --caption-lg-size: 12.58px;
+  --caption-lg-weight: 400;
+  --caption-lg-line-height: 1.65;
+  --caption-lg-letter-spacing: 0.03em;
+
+  --caption-size: 11.15px;
+  --caption-weight: 400;
+  --caption-line-height: 1.65;
+  --caption-letter-spacing: 0.03em;
+
+  --caption-sm-size: 9.89px;
+  --caption-sm-weight: 300;
+  --caption-sm-line-height: 1.65;
+  --caption-sm-letter-spacing: 0.03em;
+
+  --overline-size: 8.77px;
+  --overline-weight: 500;
+  --overline-line-height: 1.65;
+  --overline-letter-spacing: 0.03em;
+
+  --text: var(--light-2);
+  --text-muted: var(--dark-1);
+  --text-quotes: var(--dark-1);
+  --elevation-1: var(--dark-9);
+  --elevation-2: var(--dark-8);
+}
+
+html.light {
+  --background: var(--light-2);
+  --text: var(--dark-5);
+  --text-muted: var(--dark-5);
+  --text-quotes: var(--dark-4);
+  --heading-color: var(--dark-7);
+  --elevation-1: var(--light-1);
+  --elevation-2: var(--light-2);
+}
+
+@theme {
+  --color-dark-1: var(--dark-1);
+  --color-dark-2: var(--dark-2);
+  --color-dark-3: var(--dark-3);
+  --color-dark-4: var(--dark-4);
+  --color-dark-5: var(--dark-5);
+  --color-dark-6: var(--dark-6);
+  --color-dark-7: var(--dark-7);
+  --color-dark-8: var(--dark-8);
+  --color-dark-9: var(--dark-9);
+
+  --color-light-1: var(--light-1);
+  --color-light-2: var(--light-2);
+  --color-light-3: var(--light-3);
+  --color-light-4: var(--light-4);
+  --color-light-5: var(--light-5);
+  --color-light-6: var(--light-6);
+
+  --color-background: var(--background);
+  --color-muted-foreground: var(--text-muted);
+}
+
+@utility prose {
+  --tw-prose-body: var(--text);
+  --tw-prose-headings: var(--heading-color);
+  --tw-prose-bold: var(--heading-color);
+  --tw-prose-lead: var(--text-muted);
+  --tw-prose-quotes: var(--text-quotes);
+  --tw-prose-quote-borders: var(--text-quotes);
+  --tw-prose-code: var(--heading-color);
+  --tw-prose-links: var(--color-blue-400);
+  --tw-prose-counters: var(--heading-color);
+  --tw-prose-captions: var(--text-muted);
+  --tw-prose-hr: var(--text-muted);
+  --tw-prose-td-borders: var(--text-muted);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--heading-color);
+}
+
+
+html {
+  background: var(--background);
+  scroll-behavior: smooth;
+}
+
+body {
+  background:
+    var(--background);
+  font-family: "Inter", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  position: relative;
+  color: var(--text);
+}

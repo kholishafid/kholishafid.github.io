@@ -1,5 +1,5 @@
 {
-  "name": "",
+  "name": "kholishafid",
   "type": "module",
   "version": "0.0.1",
   "scripts": {
@@ -10,9 +10,7 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/mdx": "^4.2.5",
-    "@astrojs/sitemap": "^3.3.1",
-    "@astrojs/tailwind": "^6.0.2",
+    "@astrojs/sitemap": "^3.6.0",
     "@astrojs/vue": "^5.0.11",
     "@tailwindcss/vite": "^4.1.17",
     "astro": "^5.7.5",
@@ -20,9 +18,10 @@
     "mdx": "^0.3.1",
     "reading-time": "^1.5.0",
     "tailwindcss": "^4.1.17",
-    "vue": "^3.3.4"
+    "vue": "^3.5.25"
   },
   "devDependencies": {
+    "@tailwindcss/typography": "^0.5.19",
     "astro-robots-txt": "^1.0.0"
   }
 }

@@ -1,0 +1,45 @@
+---
+import { Image } from "astro:assets";
+import Clock from "./clock.vue";
+---
+
+<footer class="footer">
+  <div class="max-w-7xl w-full mx-auto h-full">
+    <section
+      class="py-6 container max-w-7xl mx-auto relative flex justify-between border-x-dashed px-4"
+    >
+      <div>
+        <h4 class="text-xl mb-8">Reach me out</h4>
+        <h4 class="text-3xl font-semibold mb-8">kholishafid@gmail.com</h4>
+        <div class="flex gap-6 items-center">
+          <h5 class="text-xl">
+            Surakarta,
+            <br /> Indonesia
+          </h5>
+          <div>
+            <Clock client:load />
+          </div>
+          <div
+            class="rounded-full overflow-hidden border border-white/40 group"
+          >
+            <Image
+              src="/img/surakarta.webp"
+              alt="Keraton Surakarta Hadiningrat"
+              class="rounded-full group-hover:scale-125 transition-transform duration-300 ease-in-out"
+              width={112}
+              height={36}
+            />
+          </div>
+        </div>
+      </div>
+      <div></div>
+    </section>
+  </div>
+  <Image
+    src="/img/geometry-1.svg"
+    alt="Geometric Shape"
+    width={700}
+    height={700}
+    class="absolute bottom-[-350px] right-1/2 translate-x-1/2 geometry-rotate"
+  />
+</footer>

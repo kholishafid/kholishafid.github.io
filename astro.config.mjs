@@ -1,11 +1,10 @@
 // @ts-check
-import { defineConfig } from 'astro/config';
+import robotsTxt from 'astro-robots-txt'
 import vue from "@astrojs/vue";
 import sitemap from "@astrojs/sitemap"
-import mdx from "@astrojs/mdx";
-import robotsTxt from 'astro-robots-txt'
-import { remarkReadingTime } from './src/helper/remark-reading-time.mjs';
 import tailwindcss from "@tailwindcss/vite";
+import { defineConfig } from 'astro/config';
+import { remarkReadingTime } from './src/helper/remark-reading-time.mjs';
 
 // https://astro.build/config
 export default defineConfig({
@@ -17,6 +16,6 @@ export default defineConfig({
     remotePatterns: [{ protocol: "https" }],
   },
   site: 'https://kholishafid.github.io',
-  integrations: [vue(), mdx(), sitemap(), robotsTxt()],
+  integrations: [vue(), sitemap(), robotsTxt()],
   vite: { plugins: [tailwindcss()], },
 });
