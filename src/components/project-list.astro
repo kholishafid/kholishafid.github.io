@@ -1,5 +1,5 @@
 ---
-import Image from "astro/components/Image.astro";
+import { Image } from "astro:assets";
 import { getCollection } from "astro:content";
 
 const projects = await getCollection("projects");
@@ -24,7 +24,7 @@ const projects = await getCollection("projects");
               class="size-8 object-cover rounded-md"
             />
           ) : (
-            <div class="size-8 bg-orange-600 rounded-md flex items-center justify-center"></div>
+            <div class="size-8 bg-orange-600 rounded-md flex items-center justify-center" />
           )}
         </div>
         <div class="h-[76px]">
