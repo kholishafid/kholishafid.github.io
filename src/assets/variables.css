@@ -34,77 +34,77 @@
   /* Typography */
   --heading-color: #ECEDEF;
 
-  --display-lg-size: 109.66px;
+    --display-lg-size: clamp(4.217rem, calc(3.558rem + 3.296vw), 6.029rem);
   --display-lg-weight: 800;
   --display-lg-line-height: 1.5;
-  --display-lg-letter-spacing: 0.005em;
+  --display-lg-letter-spacing: 0.008em;
 
-  --display-md-size: 86.21px;
+  --display-md-size: clamp(3.523rem, calc(3.052rem + 2.353vw), 4.817rem);
   --display-md-weight: 800;
   --display-md-line-height: 1.5;
   --display-md-letter-spacing: 0.008em;
 
-  --h1-size: 67.77px;
+  --h1-size: clamp(2.943rem, calc(2.614rem + 1.646vw), 3.848rem);
   --h1-weight: 700;
   --h1-line-height: 1.5;
-  --h1-letter-spacing: 0.008em;
+  --h1-letter-spacing: 0.01em;
 
-  --h2-size: 41.89px;
+  --h2-size: clamp(2.053rem, calc(1.907rem + 0.731vw), 2.455rem);
   --h2-weight: 600;
   --h2-line-height: 1.55;
   --h2-letter-spacing: 0.015em;
 
-  --h3-size: 32.93px;
+  --h3-size: clamp(1.715rem, calc(1.626rem + 0.448vw), 1.962rem);
   --h3-weight: 600;
   --h3-line-height: 1.55;
   --h3-letter-spacing: 0.02em;
 
-  --h4-size: 25.89px;
+  --h4-size: clamp(1.433rem, calc(1.384rem + 0.244vw), 1.567rem);
   --h4-weight: 500;
   --h4-line-height: 1.55;
   --h4-letter-spacing: 0.02em;
 
-  --h5-size: 22.95px;
+  --h5-size: clamp(1.310rem, calc(1.277rem + 0.165vw), 1.401rem);
   --h5-weight: 500;
   --h5-line-height: 1.6;
   --h5-letter-spacing: 0.025em;
 
-  --h6-size: 20.35px;
+  --h6-size: clamp(1.197rem, calc(1.177rem + 0.099vw), 1.252rem);
   --h6-weight: 500;
   --h6-line-height: 1.6;
-  --h6-letter-spacing: 0.025em;
+  --h6-letter-spacing: 0.03em;
 
-  --body-xl-size: 18.05px;
+  --body-xl-size: clamp(1.094rem, calc(1.085rem + 0.045vw), 1.119rem);
   --body-xl-weight: 400;
   --body-xl-line-height: 1.6;
   --body-xl-letter-spacing: 0.03em;
 
-  --body-size: 16px;
+  --body-size: clamp(1.000rem, calc(1.000rem + 0.000vw), 1.000rem);
   --body-weight: 400;
   --body-line-height: 1.6;
   --body-letter-spacing: 0.03em;
 
-  --body-sm-size: 14.19px;
+  --body-sm-size: clamp(0.914rem, calc(0.921rem + -0.037vw), 0.894rem);
   --body-sm-weight: 400;
   --body-sm-line-height: 1.65;
   --body-sm-letter-spacing: 0.03em;
 
-  --caption-lg-size: 12.58px;
+  --caption-lg-size: clamp(0.835rem, calc(0.849rem + -0.066vw), 0.799rem);
   --caption-lg-weight: 400;
   --caption-lg-line-height: 1.65;
   --caption-lg-letter-spacing: 0.03em;
 
-  --caption-size: 11.15px;
+  --caption-size: clamp(0.764rem, calc(0.782rem + -0.090vw), 0.714rem);
   --caption-weight: 400;
   --caption-line-height: 1.65;
   --caption-letter-spacing: 0.03em;
 
-  --caption-sm-size: 9.89px;
+  --caption-sm-size: clamp(0.698rem, calc(0.720rem + -0.108vw), 0.638rem);
   --caption-sm-weight: 300;
   --caption-sm-line-height: 1.65;
   --caption-sm-letter-spacing: 0.03em;
 
-  --overline-size: 8.77px;
+  --overline-size: clamp(0.638rem, calc(0.662rem + -0.123vw), 0.570rem);
   --overline-weight: 500;
   --overline-line-height: 1.65;
   --overline-letter-spacing: 0.03em;
