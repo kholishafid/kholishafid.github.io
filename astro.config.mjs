@@ -6,6 +6,8 @@ import tailwindcss from "@tailwindcss/vite";
 import { defineConfig } from 'astro/config';
 import { remarkReadingTime } from './src/helper/remark-reading-time.mjs';
 
+import markdoc from "@astrojs/markdoc";
+
 // https://astro.build/config
 export default defineConfig({
   markdown: {
@@ -16,6 +18,6 @@ export default defineConfig({
     remotePatterns: [{ protocol: "https" }],
   },
   site: 'https://kholishafid.github.io',
-  integrations: [vue(), sitemap(), robotsTxt()],
+  integrations: [vue(), sitemap(), robotsTxt(), markdoc()],
   vite: { plugins: [tailwindcss()], },
 });

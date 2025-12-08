@@ -18,8 +18,12 @@ export async function getStaticPaths() {
 
 <BlogPostLayout title={project.data.title}>
   <article class="max-w-sm md:max-w-2xl w-full mx-auto">
-    <div class="grid gap-3 mb-4 relative">
-      <h1 class="text-3xl font-semibold mb-2 order-2">{project.data.title}</h1>
+    <header class="grid gap-3 mb-4 relative">
+      <div class="mb-2 order-2">
+        <h1 class="text-3xl font-semibold mb-2" >{project.data.title}</h1>
+        <a href={`${project.data.link}`} target="_blank" rel="noopener noreferrer">{project.data.link}</a>
+      </div>
+
       <div
         class="lg:absolute order-1 right-full w-[150px] flex flex-col lg:items-end gap-2 top-0 mr-8 mb-4"
       >
@@ -29,10 +33,12 @@ export async function getStaticPaths() {
             >{remarkPluginFrontmatter.minutesRead}</span
           >
         </div>
-        <a href="/" class="flex items-center gap-1"> <i class="ph-duotone ph-arrow-left"></i> Back</a>
+        <a href="/" class="flex items-center gap-1">
+          <i class="ph-duotone ph-arrow-left"></i> Back</a
+        >
       </div>
-    </div>
-    <div class="prose max-w-sm md:max-w-2xl">
+    </header>
+    <div class="prose max-w-[calc(100vw-4rem)] dark:prose-invert md:max-w-2xl">
       <Content />
     </div>
   </article>
