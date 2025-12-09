@@ -1,5 +1,4 @@
 import { z, defineCollection } from "astro:content";
-import { date } from "astro:schema";
 
 const projects = defineCollection({
   type: "content",
