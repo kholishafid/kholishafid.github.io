@@ -1,6 +1,9 @@
 ---
 import { Image } from "astro:assets";
 import Clock from "./clock.vue";
+import Instagram from "./icons/instagram.vue";
+import Linkedin from "./icons/linkedin.vue";
+import Github from "./icons/github.vue";
 ---
 
 <footer class="footer">
@@ -10,7 +13,38 @@ import Clock from "./clock.vue";
     >
       <div>
         <h4 class="text-xl mb-8">Reach me out</h4>
-        <h4 class="text-3xl font-semibold mb-8">kholishafid@gmail.com</h4>
+        <a href="mailto:kholishafid@gmail.com" class="text-3xl font-semibold mb-8 block">kholishafid@gmail.com</a>
+        <div class="flex gap-4 mb-8">
+          <a
+            href="https://www.instagram.com/levi.milev/"
+            rel="noreferrer"
+            target="_blank"
+            title="instagram"
+            aria-label="instagram"
+          >
+            <Instagram />
+          </a>
+
+          <a
+            href="https://www.linkedin.com/in/kholishafid/"
+            rel="noreferrer"
+            target="_blank"
+            title="linkedin"
+            aria-label="linkedin"
+          >
+            <Linkedin />
+          </a>
+
+          <a
+            href="https//github.com/kholishafid"
+            rel="noreferrer"
+            target="_blank"
+            title="github"
+            aria-label="github"
+          >
+            <Github />
+          </a>
+        </div>
         <div class="flex gap-6 items-center">
           <h5 class="text-xl">
             Surakarta,
@@ -23,23 +57,22 @@ import Clock from "./clock.vue";
             class="rounded-full overflow-hidden border border-white/40 group"
           >
             <Image
-              src="/img/surakarta.webp"
+              src="/images/surakarta.webp"
               alt="Keraton Surakarta Hadiningrat"
               class="rounded-full group-hover:scale-125 transition-transform duration-300 ease-in-out"
               width={112}
-              height={36}
+              height={64}
             />
           </div>
         </div>
       </div>
-      <div></div>
     </section>
+    <Image
+      src="/images/geometry-1.svg"
+      alt="Geometric Shape"
+      width={700}
+      height={700}
+      class="absolute bottom-[-350px] right-1/2 translate-x-1/2 geometry-rotate pointer-events-none"
+    />
   </div>
-  <Image
-    src="/img/geometry-1.svg"
-    alt="Geometric Shape"
-    width={700}
-    height={700}
-    class="absolute bottom-[-350px] right-1/2 translate-x-1/2 geometry-rotate"
-  />
 </footer>

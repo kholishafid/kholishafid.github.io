@@ -1,5 +1,7 @@
 <script setup lang="ts">
 import { onMounted, ref, watchEffect } from "vue";
+import Moon from "./icons/moon.vue";
+import Sun from "./icons/sun.vue";
 
 const darkTheme = ref<boolean>(false);
 
@@ -33,37 +35,34 @@ onMounted(() => {
 
 <template>
   <button
-    class="h-10 w-10 grid place-items-center rounded-full relative overflow-hidden"
+    class="size-10 grid place-items-center rounded-full relative overflow-hidden hover:bg-light-2 dark:hover:bg-dark-8 transition-colors cursor-pointer"
     :class="{ darkTheme }"
     @click="() => setDarkTheme(!darkTheme)"
     id="theme-toggle"
+    aria-label="Toggle Theme"
   >
-    <i
-      class="ph-duotone ph-moon text-2xl inline-block absolute theme-icon"
-    ></i>
-    <i
-      class="ph-duotone ph-sun text-2xl inline-block absolute theme-icon"
-    ></i>
+    <Moon class="absolute theme-icon moon" />
+    <Sun class="absolute theme-icon sun" />
   </button>
 </template>
 
 <style scoped>
-#theme-toggle.darkTheme .ph-moon {
+#theme-toggle.darkTheme .moon {
   opacity: 0;
   top: 36px;
   scale: 0.4;
 }
-#theme-toggle:not(.darkTheme) .ph-moon {
+#theme-toggle:not(.darkTheme) .moon {
   top: 50%;
   transform: translateY(-50%);
   scale: 1;
 }
-#theme-toggle:not(.darkTheme) .ph-sun {
+#theme-toggle:not(.darkTheme) .sun {
   opacity: 0;
   bottom: 36px;
   scale: 0.4;
 }
-#theme-toggle.darkTheme .ph-sun {
+#theme-toggle.darkTheme .sun {
   bottom: 50%;
   transform: translateY(50%);
   scale: 1;

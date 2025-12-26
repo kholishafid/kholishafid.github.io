@@ -2,13 +2,17 @@
 import { getCollection } from "astro:content";
 import { getEntry } from "astro:content";
 import BlogPostLayout from "../../layouts/blog-post-layout.astro";
+import ArrowLeft from "../../components/icons/arrow-left.vue";
+import readingTime from "reading-time";
 
 const { slug } = Astro.params;
 if (!slug) throw new Error("Slug not found");
 
 const project = await getEntry("projects", slug);
 if (!project) throw new Error(`Project not found for slug: ${slug}`);
-const { Content, remarkPluginFrontmatter } = await project.render();
+const minutesRead = readingTime(project.body ?? "").text;
+
+const { Content } = await project.render();
 
 export async function getStaticPaths() {
   const projects = await getCollection("projects");
@@ -20,21 +24,33 @@ export async function getStaticPaths() {
   <article class="max-w-sm md:max-w-2xl w-full mx-auto">
     <header class="grid gap-3 mb-4 relative">
       <div class="mb-2 order-2">
-        <h1 class="text-3xl font-semibold mb-2" >{project.data.title}</h1>
-        <a href={`${project.data.link}`} target="_blank" rel="noopener noreferrer">{project.data.link}</a>
+        <h1 class="text-3xl font-semibold mb-2">{project.data.title}</h1>
+        <a
+          href={`${project.data.link}`}
+          target="_blank"
+          rel="noopener noreferrer">{project.data.link}</a
+        >
       </div>
 
       <div
         class="lg:absolute order-1 right-full w-[150px] flex flex-col lg:items-end gap-2 top-0 mr-8 mb-4"
       >
-        <div class="size-8 bg-orange-600 rounded"></div>
+        {
+          project.data.logo ? (
+            <img
+              src={project.data.logo}
+              alt={`${project.data.title} logo`}
+              class="size-8 rounded object-cover border border-gray-200 dark:border-gray-700"
+            />
+          ) : (
+            <div class="size-8 bg-orange-600 rounded" />
+          )
+        }
         <div class="flex flex-col gap-2 lg:items-end">
-          <span class="text-sm text-muted-foreground"
-            >{remarkPluginFrontmatter.minutesRead}</span
-          >
+          <span class="text-sm text-muted-foreground">{minutesRead}</span>
         </div>
         <a href="/" class="flex items-center gap-1">
-          <i class="ph-duotone ph-arrow-left"></i> Back</a
+          <ArrowLeft class="size-4" /> Back</a
         >
       </div>
     </header>

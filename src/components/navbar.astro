@@ -1,4 +1,8 @@
 ---
+import { Image } from "astro:assets";
+import Github from "./icons/github.vue";
+import Instagram from "./icons/instagram.vue";
+import Linkedin from "./icons/linkedin.vue";
 import ThemeToggle from "./theme-toggle.vue";
 ---
 
@@ -7,33 +11,61 @@ import ThemeToggle from "./theme-toggle.vue";
     <div
       class="flex items-center justify-between container px-4 border-x-dashed py-4"
     >
-      <a
-        href="/"
-      >
-        <img
-          src="/img/mark-dark.png"
+      <a href="/">
+        <Image
+          src="/images/mark-dark.png"
           alt="mark"
-          width="48"
+          width={48}
+          height={32}
           class="block dark:hidden"
         />
-        <img
-          src="/img/mark.png"
+        <Image
+          src="/images/mark.png"
           alt="mark dark"
-          width="48"
+          width={48}
+          height={32}
           class="dark:block hidden"
         />
       </a>
-      <div class="flex gap-2">
+      <div class="flex gap-4">
         <ThemeToggle client:only="vue" />
-        <button class="h-10 w-10 grid place-items-center rounded-full">
+        <button
+          class="size-10 grid place-items-center rounded-full hover:bg-light-2 dark:hover:bg-dark-8 transition"
+          aria-label="instagram"
+        >
           <a
-            href="//github.com/kholishafid"
+            href="https://www.instagram.com/levi.milev/"
+            rel="noreferrer"
+            target="_blank"
+            title="instagram"
+          >
+            <Instagram />
+          </a>
+        </button>
+        <button
+          class="size-10 grid place-items-center rounded-full hover:bg-light-2 dark:hover:bg-dark-8 transition"
+          aria-label="linkedin"
+        >
+          <a
+            href="https://www.linkedin.com/in/kholishafid/"
+            rel="noreferrer"
+            target="_blank"
+            title="linkedin"
+          >
+            <Linkedin />
+          </a>
+        </button>
+        <button
+          class="size-10 grid place-items-center rounded-full hover:bg-light-2 dark:hover:bg-dark-8 transition"
+          aria-label="github"
+        >
+          <a
+            href="https//github.com/kholishafid"
             rel="noreferrer"
             target="_blank"
             title="github"
           >
-            <i class="ph-duotone ph-github-logo text-2xl inline-block github"
-            ></i>
+            <Github />
           </a>
         </button>
       </div>

@@ -48,7 +48,6 @@
 
 .project__item {
   padding: calc(var(--spacing) * 8);
-  border: 1px solid var(--elevation-2);
   background-color: var(--elevation-2);
   border-radius: var(--radius-2xl);
   display: flex;

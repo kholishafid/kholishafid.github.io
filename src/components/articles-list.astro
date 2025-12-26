@@ -1,5 +1,6 @@
 ---
 import { getCollection } from "astro:content";
+import Info from "./icons/info.vue";
 
 const articles = await getCollection("articles");
 ---
@@ -7,7 +8,7 @@ const articles = await getCollection("articles");
 <div class="col-span-2">
   <div class="grid gap-3">
     <p class="text-muted-foreground flex items-center gap-2">
-      <i class="ph-duotone ph-info"></i>
+      <Info class="size-4 text-muted-foreground" />
       More content soon...
     </p>
     {
@@ -19,7 +20,7 @@ const articles = await getCollection("articles");
             class="no-underline group text-base flex gap-1 items-center"
           >
             <span class="sm:flex items-center gap-1">
-              <h6 class="mb-1 line-clamp-1">{articles.data.title}</h6>
+              <h3 class="mb-1 line-clamp-1">{articles.data.title}</h3>
               <p class="text-muted-foreground hidden sm:block">
                 {articles.data.short_description}
               </p>

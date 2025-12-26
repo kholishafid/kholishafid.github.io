@@ -8,10 +8,6 @@
   --primary: #565253;
   --secondary: #1f1f1e;
   --accent: #878283;
-  --dot-bg: var(--background);
-  --dot-color: hsl(0, 0%, 25%);
-  --dot-size: 1px;
-  --dot-space: 24px;
   --line-color: rgba(255, 255, 255, 0.5);
 
   --light-1: hsl(218, 8%, 96%);
@@ -32,9 +28,9 @@
   --dark-9: hsl(218, 8%, 8%);
 
   /* Typography */
-  --heading-color: #ECEDEF;
+  --heading-color: #ecedef;
 
-    --display-lg-size: clamp(4.217rem, calc(3.558rem + 3.296vw), 6.029rem);
+  --display-lg-size: clamp(4.217rem, calc(3.558rem + 3.296vw), 6.029rem);
   --display-lg-weight: 800;
   --display-lg-line-height: 1.5;
   --display-lg-letter-spacing: 0.008em;
@@ -64,7 +60,7 @@
   --h4-line-height: 1.55;
   --h4-letter-spacing: 0.02em;
 
-  --h5-size: clamp(1.310rem, calc(1.277rem + 0.165vw), 1.401rem);
+  --h5-size: clamp(1.31rem, calc(1.277rem + 0.165vw), 1.401rem);
   --h5-weight: 500;
   --h5-line-height: 1.6;
   --h5-letter-spacing: 0.025em;
@@ -79,7 +75,7 @@
   --body-xl-line-height: 1.6;
   --body-xl-letter-spacing: 0.03em;
 
-  --body-size: clamp(1.000rem, calc(1.000rem + 0.000vw), 1.000rem);
+  --body-size: clamp(1rem, calc(1rem + 0vw), 1rem);
   --body-weight: 400;
   --body-line-height: 1.6;
   --body-letter-spacing: 0.03em;
@@ -94,17 +90,17 @@
   --caption-lg-line-height: 1.65;
   --caption-lg-letter-spacing: 0.03em;
 
-  --caption-size: clamp(0.764rem, calc(0.782rem + -0.090vw), 0.714rem);
+  --caption-size: clamp(0.764rem, calc(0.782rem + -0.09vw), 0.714rem);
   --caption-weight: 400;
   --caption-line-height: 1.65;
   --caption-letter-spacing: 0.03em;
 
-  --caption-sm-size: clamp(0.698rem, calc(0.720rem + -0.108vw), 0.638rem);
+  --caption-sm-size: clamp(0.698rem, calc(0.72rem + -0.108vw), 0.638rem);
   --caption-sm-weight: 300;
   --caption-sm-line-height: 1.65;
   --caption-sm-letter-spacing: 0.03em;
 
-  --overline-size: clamp(0.638rem, calc(0.662rem + -0.123vw), 0.570rem);
+  --overline-size: clamp(0.638rem, calc(0.662rem + -0.123vw), 0.57rem);
   --overline-weight: 500;
   --overline-line-height: 1.65;
   --overline-letter-spacing: 0.03em;
@@ -114,16 +110,18 @@
   --text-quotes: var(--dark-1);
   --elevation-1: var(--dark-9);
   --elevation-2: var(--dark-8);
+  --elevation-3: var(--dark-8);
 }
 
 html.light {
-  --background: var(--light-2);
+  --background: var(--light-1);
   --text: var(--dark-5);
   --text-muted: var(--dark-5);
   --text-quotes: var(--dark-4);
-  --heading-color: var(--dark-7);
-  --elevation-1: var(--light-1);
-  --elevation-2: var(--light-2);
+  --heading-color: var(--dark-6);
+  --elevation-1: var(--color-white);
+  --elevation-2: var(--light-1);
+  --elevation-3: var(--light-2);
 }
 
 @theme {
@@ -172,16 +170,16 @@ h6 {
   color: var(--heading-color);
 }
 
-
 html {
   background: var(--background);
   scroll-behavior: smooth;
 }
 
 body {
-  background:
-    var(--background);
-  font-family: "Inter", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  background: var(--background);
+  font-family:
+    "Inter", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
